@@ -108,6 +108,14 @@ a {
   box-shadow: 0 24px 60px rgba(16, 26, 34, 0.15);
 }
 
+.hero-join {
+  min-height: 620px;
+  background:
+    linear-gradient(90deg, rgba(16, 26, 34, 0.76) 0%, rgba(16, 26, 34, 0.48) 42%, rgba(16, 26, 34, 0.16) 72%),
+    linear-gradient(180deg, rgba(16, 26, 34, 0.16), rgba(16, 26, 34, 0.48)),
+    url("images/coach-glencoe.jpg") center center / cover no-repeat;
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -125,6 +133,11 @@ a {
   align-items: center;
   gap: 3rem;
   padding: 4rem 3.5rem;
+}
+
+.hero-inner-wide {
+  grid-template-columns: minmax(0, 1fr) 380px;
+  min-height: 620px;
 }
 
 .hero-copy {
@@ -403,6 +416,70 @@ h1 {
   border-style: dashed;
 }
 
+.signup-summary {
+  max-width: 760px;
+  margin: 0 auto 1.25rem;
+  padding: 1rem 1.15rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(230, 221, 208, 0.9);
+  border-radius: 20px;
+}
+
+.signup-summary p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.signup-summary p + p {
+  margin-top: 0.55rem;
+}
+
+.signup-shell {
+  display: block;
+}
+
+.kit-embed-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.kit-embed-shell .formkit-form {
+  margin: 0 auto;
+}
+
+.kit-embed-shell .formkit-header,
+.kit-embed-shell .formkit-subheader {
+  display: none;
+}
+
+.kit-embed-shell .formkit-form[data-uid="850c8af291"] [data-style="minimal"] {
+  padding-top: 28px;
+}
+
+.kit-embed-shell .formkit-form[data-uid="850c8af291"] .formkit-fields {
+  margin-top: 0;
+}
+
+.kit-placeholder {
+  min-height: 320px;
+  border: 1.5px dashed #ccbfae;
+  border-radius: 22px;
+  background: rgba(246, 242, 235, 0.72);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.kit-placeholder p {
+  max-width: 34ch;
+}
+
 .footer {
   padding: 2rem 0 3rem;
   color: var(--muted);
@@ -444,6 +521,7 @@ h1 {
     width: 100%;
     max-width: 420px;
   }
+
 }
 
 @media (max-width: 720px) {
@@ -466,5 +544,10 @@ h1 {
 
   .hero-sub {
     max-width: 34ch;
+  }
+
+  .kit-placeholder {
+    min-height: 260px;
+    padding: 1.5rem;
   }
 }
