@@ -383,11 +383,18 @@ h1 {
 }
 
 .subtle-link {
-  display: inline-block;
+  display: block;
   margin-top: 0.9rem;
   color: var(--accent-dark);
   font-weight: 700;
   font-size: 0.95rem;
+  width: fit-content;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.subtle-link:hover {
+  color: var(--accent);
+  transform: translateX(2px);
 }
 
 #upcoming-tours .info-grid {
