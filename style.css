@@ -42,6 +42,24 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: var(--deep);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: var(--shadow-soft);
+  transition: top 0.18s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 .container {
   width: min(var(--max), calc(100% - 3rem));
   margin: 0 auto;
