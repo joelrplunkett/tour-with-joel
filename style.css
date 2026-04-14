@@ -487,8 +487,8 @@ h1 {
 .region-image-east {
   background-image:
     linear-gradient(180deg, rgba(22, 30, 38, 0.12), rgba(22, 30, 38, 0.3)),
-    url("images/three-sisters-glencoe.jpeg");
-  background-position: center 62%;
+    url("images/prague-eastern-europe.jpg");
+  background-position: center;
 }
 
 .operators-grid {
