@@ -87,9 +87,35 @@ a {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   font-size: 1rem;
+}
+
+.brand-lockup-main {
+  min-width: 0;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.8rem;
+  background: var(--deep);
+  color: #f5f1ea;
+  font-family: Baskerville, Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 8px 16px rgba(20, 28, 35, 0.12);
+}
+
+.brand-name {
+  white-space: nowrap;
 }
 
 .nav {
@@ -789,6 +815,13 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.85rem;
+  }
+
+  .brand-mark {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.72rem;
+    font-size: 1.28rem;
   }
 
   .topbar {
