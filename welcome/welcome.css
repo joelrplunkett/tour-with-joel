@@ -242,6 +242,17 @@ h1{
   margin:18px 0 20px;
 }
 
+.hero-portrait {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 18px;
+  border: 2px solid rgba(255,255,255,0.25);
+  display: block;
+}
+
 .hero-pills{
   display:flex;
   gap:10px;

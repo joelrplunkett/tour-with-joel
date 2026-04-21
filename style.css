@@ -317,6 +317,16 @@ h1 {
   margin-bottom: 1.55rem;
 }
 
+.about-portrait {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
 .section h2 {
   margin: 0 0 0.6rem;
   font-size: clamp(1.6rem, 3vw, 2.25rem);
