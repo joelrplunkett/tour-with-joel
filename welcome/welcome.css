@@ -162,7 +162,7 @@ a:hover{opacity:.88}
     linear-gradient(180deg, rgba(10,22,28,.35) 0%, rgba(8,26,35,.65) 60%, rgba(6,18,24,.85) 100%),
     radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 30%),
     linear-gradient(120deg, rgba(31,58,35,.45), rgba(16,70,88,.40) 50%, rgba(36,42,61,.30) 85%),
-    url("../images/glendalough-tower.JPG") center/cover no-repeat;
+    url("../images/glendalough-tower.webp") center/cover no-repeat;
   isolation:isolate;
 }
 

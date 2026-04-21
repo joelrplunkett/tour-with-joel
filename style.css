@@ -152,7 +152,7 @@ a {
   background:
     linear-gradient(90deg, rgba(16, 26, 34, 0.72) 0%, rgba(16, 26, 34, 0.42) 40%, rgba(16, 26, 34, 0.15) 70%),
     linear-gradient(180deg, rgba(16, 26, 34, 0.18), rgba(16, 26, 34, 0.55)),
-    url("images/three-sisters-glencoe.jpeg") center 60% / cover no-repeat;
+    url("images/three-sisters-glencoe.webp") center 60% / cover no-repeat;
   box-shadow: 0 24px 60px rgba(16, 26, 34, 0.15);
 }
 
@@ -161,7 +161,7 @@ a {
   background:
     linear-gradient(90deg, rgba(16, 26, 34, 0.76) 0%, rgba(16, 26, 34, 0.48) 42%, rgba(16, 26, 34, 0.16) 72%),
     linear-gradient(180deg, rgba(16, 26, 34, 0.16), rgba(16, 26, 34, 0.48)),
-    url("images/coach-glencoe.jpg") center center / cover no-repeat;
+    url("images/coach-glencoe.webp") center center / cover no-repeat;
 }
 
 .hero::after {
@@ -475,13 +475,13 @@ h1 {
 .region-image-uk {
   background-image:
     linear-gradient(180deg, rgba(22, 30, 38, 0.12), rgba(22, 30, 38, 0.3)),
-    url("images/glendalough-cemetary.JPG");
+    url("images/glendalough-cemetary.webp");
 }
 
 .region-image-europe {
   background-image:
     linear-gradient(180deg, rgba(22, 30, 38, 0.12), rgba(22, 30, 38, 0.3)),
-    url("images/colosseum-1.JPEG");
+    url("images/colosseum-1.webp");
 }
 
 .region-image-east {
