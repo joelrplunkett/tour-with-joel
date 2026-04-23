@@ -4,19 +4,19 @@
    - Change colours here first if you want to tweak theme
    ========================================================= */
 :root{
-  --bg:#eef3f1;
+  --bg:#f2f0ea;
   --paper:#ffffff;
-  --ink:#17212b;
-  --muted:#5d6a74;
-  --line:rgba(23,33,43,.10);
-  --brand:#0d5c63;
-  --brand-2:#124f7b;
+  --ink:#1f2a33;
+  --muted:#5c6871;
+  --line:#ded4c6;
+  --brand:#41596e;
+  --brand-2:#2f4659;
   --gold:#b88a3b;
   --moss:#5f7b57;
   --whatsapp:#1fa463;
-  --shadow:0 18px 45px rgba(15,34,48,.10);
+  --shadow:0 14px 34px rgba(20, 28, 35, .08);
   --radius:24px;
-  --max:1120px;
+  --max:1140px;
 }
 
 /* =========================================================
@@ -30,9 +30,9 @@ body{
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color:var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(184,138,59,.10), transparent 28%),
-    radial-gradient(circle at top right, rgba(13,92,99,.12), transparent 30%),
-    linear-gradient(180deg, #edf3f6 0%, #eef3f1 38%, #f7f4ed 100%);
+    radial-gradient(circle at top left, rgba(122, 104, 80, .08), transparent 24%),
+    radial-gradient(circle at top right, rgba(65, 89, 110, .06), transparent 22%),
+    linear-gradient(180deg, #f8f6f1 0%, #f2f0ea 52%, #ece8e0 100%);
   line-height:1.65;
 }
 
@@ -48,8 +48,8 @@ a:hover{opacity:.88}
   top:0;
   z-index:50;
   backdrop-filter: blur(12px);
-  background:rgba(255,255,255,.72);
-  border-bottom:1px solid rgba(255,255,255,.45);
+  background:rgba(248, 246, 241, .88);
+  border-bottom:1px solid rgba(222, 212, 198, .84);
 }
 
 .topbar-inner{
@@ -122,7 +122,7 @@ a:hover{opacity:.88}
 .mini-btn{
   text-decoration:none;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.82);
+  background:rgba(255,255,255,.9);
   color:var(--ink);
   min-height:54px;
   padding:10px 16px;
@@ -138,7 +138,7 @@ a:hover{opacity:.88}
 }
 
 .mini-btn.whatsapp{
-  background:linear-gradient(135deg, #2bcf78, var(--whatsapp));
+  background:linear-gradient(135deg, #31c77b, var(--whatsapp));
   color:#fff;
   border:none;
 }
@@ -157,11 +157,11 @@ a:hover{opacity:.88}
   overflow:hidden;
   border-radius:34px;
   min-height:600px;
-  box-shadow:0 26px 60px rgba(12,25,37,.18);
+  box-shadow:0 20px 44px rgba(12,25,37,.14);
   background:
-    linear-gradient(180deg, rgba(10,22,28,.35) 0%, rgba(8,26,35,.65) 60%, rgba(6,18,24,.85) 100%),
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,.15), transparent 30%),
-    linear-gradient(120deg, rgba(31,58,35,.45), rgba(16,70,88,.40) 50%, rgba(36,42,61,.30) 85%),
+    linear-gradient(180deg, rgba(14,24,34,.24) 0%, rgba(14,24,34,.5) 56%, rgba(14,24,34,.72) 100%),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.14), transparent 30%),
+    linear-gradient(120deg, rgba(54,76,61,.34), rgba(50,76,97,.30) 50%, rgba(43,51,67,.24) 85%),
     url("../images/glendalough-tower.webp") center/cover no-repeat;
   isolation:isolate;
 }
@@ -376,6 +376,48 @@ h1{
   padding:18px 18px 52px;
 }
 
+.tour-glimpse{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:12px;
+  margin:6px 0 22px;
+}
+
+.tour-glimpse-card{
+  position:relative;
+  margin:0;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(222, 212, 198, .9);
+  background:#fff;
+}
+
+.tour-glimpse-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.tour-glimpse-card figcaption{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  margin:0;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(31,42,51,.54);
+  border:1px solid rgba(255,255,255,.24);
+  backdrop-filter:blur(8px);
+  color:#f9fafb;
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  line-height:1;
+}
+
 .anchor-nav{
   display:flex;
   gap:10px;
@@ -389,11 +431,11 @@ h1{
   color:var(--ink);
   padding:10px 16px;
   border-radius:999px;
-  background:rgba(255,255,255,.78);
+  background:rgba(255,255,255,.86);
   border:1px solid var(--line);
   font-weight:700;
   font-size:.92rem;
-  box-shadow:0 6px 18px rgba(15,34,48,.04);
+  box-shadow:0 5px 14px rgba(15,34,48,.04);
   flex:0 0 auto;
 }
 
@@ -414,10 +456,10 @@ h1{
    STANDARD CONTENT SECTION
    ========================================================= */
 .section{
-  background:rgba(255,255,255,.78);
-  border:1px solid rgba(255,255,255,.85);
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(255,255,255,.92);
   box-shadow:var(--shadow);
-  border-radius:30px;
+  border-radius:28px;
   padding:28px;
   margin:16px 0;
   backdrop-filter:blur(10px);
@@ -468,10 +510,10 @@ h1{
 
 .tile{
   background:var(--paper);
-  border:1px solid var(--line);
+  border:1px solid rgba(222, 212, 198, .9);
   border-radius:22px;
   padding:20px;
-  box-shadow:0 10px 24px rgba(15,34,48,.04);
+  box-shadow:0 10px 24px rgba(20, 28, 35, .05);
 }
 
 .tile h3{
@@ -670,6 +712,10 @@ tr:last-child td{
   }
 
   .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .tour-glimpse{
     grid-template-columns:1fr;
   }
 }
