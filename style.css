@@ -364,6 +364,14 @@ a {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.photo-cluster-tour-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.photo-cluster-tour-strip .photo-cluster-card img {
+  height: 230px;
+}
+
 .photo-cluster-card {
   margin: 0;
   min-width: 0;
