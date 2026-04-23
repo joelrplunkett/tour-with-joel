@@ -452,21 +452,36 @@ h1{
   background:rgba(18,79,123,.06);
 }
 
+.airport-photo-links{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+
 .inline-photo-link{
-  display:inline-block;
-  margin-left:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  min-width:92px;
+  margin-left:0;
+  padding:0 12px;
   color:var(--muted);
   font-size:.78rem;
   font-weight:600;
   text-decoration:none;
-  border-bottom:1px dotted rgba(47,70,89,.45);
+  border-radius:999px;
+  border:1px solid rgba(47,70,89,.22);
+  background:rgba(255,255,255,.7);
   line-height:1.2;
   white-space:nowrap;
 }
 
 .inline-photo-link:hover{
   color:var(--brand-2);
-  border-bottom-color:rgba(47,70,89,.75);
+  border-color:rgba(47,70,89,.58);
+  background:rgba(255,255,255,.92);
 }
 
 .image-modal{
@@ -870,8 +885,13 @@ tr:last-child td{
   }
 
   .inline-photo-link{
-    margin-left:0;
-    margin-top:6px;
+    min-height:44px;
+    min-width:110px;
+    font-size:.86rem;
+  }
+
+  .airport-photo-links{
+    gap:8px;
   }
 
   .image-modal-panel{
