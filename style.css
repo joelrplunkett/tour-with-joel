@@ -700,13 +700,13 @@ h1 {
 }
 
 .story-image-road {
-  object-position: center 50%;
+  object-position: 62% 50%;
 }
 
 .story-image-label {
   position: absolute;
   left: 0.88rem;
-  top: 0.88rem;
+  bottom: 0.88rem;
   z-index: 1;
   margin: 0;
   padding: 0.3rem 0.55rem;
@@ -1139,7 +1139,7 @@ h1 {
   }
 
   .story-image-road {
-    object-position: center 52%;
+    object-position: 60% 52%;
   }
 
   .gallery-card img {
@@ -1228,7 +1228,7 @@ h1 {
 
   .story-image-label {
     left: 0.65rem;
-    top: 0.65rem;
+    bottom: 0.65rem;
     font-size: 0.62rem;
     padding: 0.29rem 0.48rem;
   }
