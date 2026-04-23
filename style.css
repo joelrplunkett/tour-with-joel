@@ -676,7 +676,7 @@ h1 {
 }
 
 .story-feature-road {
-  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 }
 
 .story-image-shell,
@@ -693,7 +693,7 @@ h1 {
 }
 
 .story-image-shell-road {
-  min-height: 610px;
+  min-height: 560px;
 }
 
 .story-image {
@@ -794,7 +794,7 @@ h1 {
 .region-image-europe {
   background-image:
     linear-gradient(180deg, rgba(22, 30, 38, 0.12), rgba(22, 30, 38, 0.3)),
-    url("images/site/joel-region-europe-colosseum.webp");
+    url("images/site/joel-region-europe-eiffel-night.webp");
 }
 
 .region-image-east {
@@ -1140,7 +1140,7 @@ h1 {
   }
 
   .story-image-shell-road {
-    min-height: 430px;
+    min-height: 390px;
   }
 
   .story-image-road {
