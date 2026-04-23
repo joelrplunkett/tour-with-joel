@@ -694,6 +694,7 @@ h1 {
 
 .story-image-shell-road {
   min-height: 470px;
+  background: #c9d2df;
 }
 
 .story-image {
@@ -704,6 +705,7 @@ h1 {
 }
 
 .story-image-road {
+  object-fit: contain;
   object-position: 76% 50%;
 }
 
@@ -1143,6 +1145,7 @@ h1 {
   }
 
   .story-image-road {
+    object-fit: contain;
     object-position: 72% 52%;
   }
 
