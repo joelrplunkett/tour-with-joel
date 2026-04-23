@@ -1,14 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
-  <title>Tour with Joel monogram</title>
-  <rect width="256" height="256" rx="56" fill="#081628" />
-  <text
-    x="128"
-    y="188"
-    text-anchor="middle"
-    fill="#F5F1EA"
-    font-family="Baskerville, Georgia, 'Times New Roman', serif"
-    font-size="184"
-    font-weight="700"
-    letter-spacing="-6"
-  >J</text>
+  <title>Tour with Joel</title>
+  <rect width="256" height="256" rx="56" fill="#3a5068"/>
+  <path d="M187 43H92v23h24c4 0 6 2 6 6v93c0 15-4 27-13 35-9 8-23 14-43 17v20c32-1 57-8 74-23 17-15 26-35 26-61V72c0-4 2-6 6-6h15V43Z"
+    fill="#F5F1EA"/>
 </svg>
