@@ -685,6 +685,7 @@ h1 {
 .story-image-shell {
   min-height: 520px;
   background: #d8d0c4;
+  position: relative;
 }
 
 .story-image {
@@ -692,6 +693,29 @@ h1 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.story-image-road {
+  object-position: center 56%;
+}
+
+.story-image-label {
+  position: absolute;
+  left: 0.95rem;
+  bottom: 0.95rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0.34rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(31, 42, 51, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  color: #f8fbff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .story-copy {
@@ -1106,6 +1130,10 @@ h1 {
     min-height: 360px;
   }
 
+  .story-image-road {
+    object-position: center 58%;
+  }
+
   .gallery-card img {
     height: 300px;
   }
@@ -1188,6 +1216,13 @@ h1 {
 
   .story-copy {
     padding: 1.35rem;
+  }
+
+  .story-image-label {
+    left: 0.72rem;
+    bottom: 0.72rem;
+    font-size: 0.66rem;
+    padding: 0.31rem 0.52rem;
   }
 
   .region-image {
