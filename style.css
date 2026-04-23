@@ -705,7 +705,7 @@ h1 {
 
 .story-image-road {
   object-fit: cover;
-  object-position: 80% 54%;
+  object-position: center;
 }
 
 .story-image-label {
@@ -1145,7 +1145,7 @@ h1 {
 
   .story-image-road {
     object-fit: cover;
-    object-position: 76% 54%;
+    object-position: center;
   }
 
   .gallery-card img {
