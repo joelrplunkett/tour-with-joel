@@ -676,7 +676,7 @@ h1 {
 }
 
 .story-feature-road {
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
 }
 
 .story-image-shell,
@@ -693,8 +693,7 @@ h1 {
 }
 
 .story-image-shell-road {
-  min-height: 470px;
-  background: #c9d2df;
+  min-height: 610px;
 }
 
 .story-image {
@@ -705,8 +704,8 @@ h1 {
 }
 
 .story-image-road {
-  object-fit: contain;
-  object-position: 76% 50%;
+  object-fit: cover;
+  object-position: 74% 54%;
 }
 
 .story-image-label {
@@ -1141,12 +1140,12 @@ h1 {
   }
 
   .story-image-shell-road {
-    min-height: 330px;
+    min-height: 430px;
   }
 
   .story-image-road {
-    object-fit: contain;
-    object-position: 72% 52%;
+    object-fit: cover;
+    object-position: 70% 54%;
   }
 
   .gallery-card img {
