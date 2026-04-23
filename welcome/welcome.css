@@ -452,6 +452,83 @@ h1{
   background:rgba(18,79,123,.06);
 }
 
+.inline-photo-link{
+  display:inline-block;
+  margin-left:8px;
+  padding:3px 9px;
+  border-radius:999px;
+  border:1px solid rgba(18,79,123,.2);
+  background:rgba(18,79,123,.08);
+  color:var(--brand-2);
+  font-size:.8rem;
+  font-weight:700;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.image-modal{
+  position:fixed;
+  inset:0;
+  z-index:120;
+  display:grid;
+  place-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .18s ease;
+}
+
+.image-modal:target{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.image-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(17,24,32,.6);
+  backdrop-filter:blur(2px);
+}
+
+.image-modal-panel{
+  position:relative;
+  z-index:1;
+  width:min(980px, calc(100% - 2rem));
+  margin:0;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid rgba(222, 212, 198, .9);
+  box-shadow:0 24px 56px rgba(10, 20, 30, .28);
+}
+
+.image-modal-panel figcaption{
+  padding:12px 14px;
+  font-size:.9rem;
+  color:var(--muted);
+  border-bottom:1px solid rgba(222, 212, 198, .9);
+}
+
+.image-modal-panel img{
+  width:100%;
+  max-height:min(72vh, 780px);
+  object-fit:contain;
+  background:#101a24;
+}
+
+.image-modal-close{
+  position:absolute;
+  top:10px;
+  right:10px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.34);
+  background:rgba(17,24,32,.66);
+  color:#fff;
+  font-size:.82rem;
+  font-weight:700;
+  text-decoration:none;
+}
+
 /* =========================================================
    STANDARD CONTENT SECTION
    ========================================================= */
@@ -783,5 +860,14 @@ tr:last-child td{
 
   .quick-start-card{
     padding:1.5rem;
+  }
+
+  .inline-photo-link{
+    margin-left:0;
+    margin-top:6px;
+  }
+
+  .image-modal-panel{
+    width:calc(100% - 1rem);
   }
 }
