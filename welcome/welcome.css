@@ -518,6 +518,10 @@ h1{
   background:#101a24;
 }
 
+.image-modal-img-t1{
+  transform:rotate(180deg);
+}
+
 .image-modal-close{
   position:absolute;
   top:10px;
