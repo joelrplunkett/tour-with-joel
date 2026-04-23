@@ -688,6 +688,10 @@ h1 {
   position: relative;
 }
 
+.story-image-shell-road {
+  min-height: 470px;
+}
+
 .story-image {
   width: 100%;
   height: 100%;
@@ -696,24 +700,24 @@ h1 {
 }
 
 .story-image-road {
-  object-position: center 56%;
+  object-position: center 50%;
 }
 
 .story-image-label {
   position: absolute;
-  left: 0.95rem;
-  bottom: 0.95rem;
+  left: 0.88rem;
+  top: 0.88rem;
   z-index: 1;
   margin: 0;
-  padding: 0.34rem 0.6rem;
+  padding: 0.3rem 0.55rem;
   border-radius: 999px;
-  background: rgba(31, 42, 51, 0.48);
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(31, 42, 51, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   color: #f8fbff;
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -1130,8 +1134,12 @@ h1 {
     min-height: 360px;
   }
 
+  .story-image-shell-road {
+    min-height: 330px;
+  }
+
   .story-image-road {
-    object-position: center 58%;
+    object-position: center 52%;
   }
 
   .gallery-card img {
@@ -1219,10 +1227,10 @@ h1 {
   }
 
   .story-image-label {
-    left: 0.72rem;
-    bottom: 0.72rem;
-    font-size: 0.66rem;
-    padding: 0.31rem 0.52rem;
+    left: 0.65rem;
+    top: 0.65rem;
+    font-size: 0.62rem;
+    padding: 0.29rem 0.48rem;
   }
 
   .region-image {
