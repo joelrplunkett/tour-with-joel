@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">UK Type G plug adapter reference</title>
+  <desc id="desc">Illustration of UK Type G plug shape with three rectangular prongs and matching socket layout.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f2a33" />
+      <stop offset="1" stop-color="#2d3b47" />
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f9fb" />
+      <stop offset="1" stop-color="#e9eef2" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)" />
+
+  <rect x="80" y="90" width="1040" height="720" rx="36" fill="url(#card)" />
+  <text x="130" y="180" font-family="Inter,Arial,sans-serif" font-size="54" font-weight="700" fill="#1f2a33">UK TYPE G PLUG ADAPTER</text>
+  <text x="130" y="230" font-family="Inter,Arial,sans-serif" font-size="30" fill="#4c5b66">Three rectangular prongs</text>
+
+  <g transform="translate(145 280)">
+    <text x="0" y="-22" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#2f4659">Plug shape</text>
+    <rect x="0" y="0" width="390" height="420" rx="34" fill="#ffffff" stroke="#d5dde4" stroke-width="4" />
+    <rect x="145" y="38" width="100" height="170" rx="8" fill="#caa66a" />
+    <rect x="75" y="120" width="70" height="140" rx="8" fill="#caa66a" />
+    <rect x="245" y="120" width="70" height="140" rx="8" fill="#caa66a" />
+    <rect x="68" y="285" width="254" height="102" rx="14" fill="#f3f7fa" stroke="#dbe3ea" stroke-width="3" />
+    <text x="195" y="350" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="700" fill="#30414e">Type G</text>
+  </g>
+
+  <g transform="translate(655 280)">
+    <text x="0" y="-22" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="700" fill="#2f4659">Socket layout</text>
+    <rect x="0" y="0" width="390" height="420" rx="34" fill="#ffffff" stroke="#d5dde4" stroke-width="4" />
+    <rect x="165" y="85" width="60" height="120" rx="8" fill="#2f4659" />
+    <rect x="110" y="230" width="50" height="95" rx="8" fill="#2f4659" />
+    <rect x="230" y="230" width="50" height="95" rx="8" fill="#2f4659" />
+    <circle cx="195" cy="332" r="22" fill="#dde6ee" />
+  </g>
+
+  <text x="130" y="775" font-family="Inter,Arial,sans-serif" font-size="26" fill="#556571">Tip: bring a universal adapter that explicitly includes UK Type G.</text>
+</svg>
