@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Guest Services;European;;;
+FN:European Guest Services (Trafalgar)
+ORG:Trafalgar
+TEL;TYPE=WORK,VOICE:+44 207 620 8900
+EMAIL;TYPE=INTERNET:EuropeanGuestServices@ttc.com
+NOTE:Pre-tour urgent support contact for Trafalgar guests.
+END:VCARD

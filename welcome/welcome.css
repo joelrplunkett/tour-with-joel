@@ -847,6 +847,24 @@ tr:last-child td{
   flex:0 0 auto;
 }
 
+.contact-card-egs .tip{
+  margin-top:10px;
+  margin-bottom:6px;
+  padding:13px 14px;
+}
+
+.contact-card-egs .contact-row{
+  padding:10px 0;
+}
+
+.contact-card-egs .tip + .contact-row{
+  margin-top:4px;
+}
+
+.contact-card-egs .contact-row div{
+  line-height:1.4;
+}
+
 /* =========================================================
    FOOTER
    ========================================================= */
