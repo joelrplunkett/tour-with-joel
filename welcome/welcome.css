@@ -260,6 +260,14 @@ h1{
   margin:6px 0 16px;
 }
 
+.hero-support{
+  margin:2px 0 18px;
+  max-width:48ch;
+  color:rgba(255,255,255,.9);
+  font-size:.95rem;
+  line-height:1.55;
+}
+
 .hero-pill{
   padding:9px 13px;
   border-radius:999px;
