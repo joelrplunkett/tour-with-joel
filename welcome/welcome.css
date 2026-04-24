@@ -566,6 +566,24 @@ h1{
   border-bottom:1px solid rgba(222, 212, 198, .9);
 }
 
+.modal-ref-links{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:8px;
+  font-size:.8rem;
+}
+
+.modal-ref-links a{
+  color:var(--brand-2);
+  text-decoration:none;
+  border-bottom:1px dotted rgba(47,70,89,.6);
+}
+
+.modal-ref-links a:hover{
+  border-bottom-color:rgba(47,70,89,.95);
+}
+
 .image-modal-panel img{
   width:100%;
   max-height:min(72vh, 780px);
