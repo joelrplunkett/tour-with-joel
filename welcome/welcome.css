@@ -289,6 +289,9 @@ h1{
   align-items:center;
   justify-content:center;
   gap:10px;
+  border:1px solid transparent;
+  cursor:pointer;
+  font:inherit;
   text-decoration:none;
   padding:14px 18px;
   border-radius:16px;
@@ -691,6 +694,10 @@ h1{
   margin-bottom:0;
 }
 
+.before-travel-grid .tile-arrival-plan{
+  grid-row:span 2;
+}
+
 /* =========================================================
    SIMPLE BULLET LIST INSIDE CARDS
    ========================================================= */
@@ -946,6 +953,10 @@ tr:last-child td{
 
   .grid{
     grid-template-columns:1fr;
+  }
+
+  .before-travel-grid .tile-arrival-plan{
+    grid-row:auto;
   }
 
   .anchor-nav{
