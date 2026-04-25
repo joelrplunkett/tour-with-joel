@@ -702,6 +702,26 @@ h1{
   grid-row:span 2;
 }
 
+.practical-balance-grid .tile-currency{
+  grid-column:1;
+  grid-row:1;
+}
+
+.practical-balance-grid .tile-toilets{
+  grid-column:1;
+  grid-row:2;
+}
+
+.practical-balance-grid .tile-security{
+  grid-column:1;
+  grid-row:3;
+}
+
+.practical-balance-grid .tile-optionals{
+  grid-column:2;
+  grid-row:1 / span 3;
+}
+
 /* =========================================================
    SIMPLE BULLET LIST INSIDE CARDS
    ========================================================= */
@@ -970,6 +990,14 @@ tr:last-child td{
   }
 
   .before-travel-grid .tile-arrival-plan{
+    grid-row:auto;
+  }
+
+  .practical-balance-grid .tile-currency,
+  .practical-balance-grid .tile-toilets,
+  .practical-balance-grid .tile-security,
+  .practical-balance-grid .tile-optionals{
+    grid-column:auto;
     grid-row:auto;
   }
 
