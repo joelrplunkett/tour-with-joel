@@ -10,6 +10,7 @@ BRAVE_BIN="${BRAVE_BIN:-/Applications/Brave Browser.app/Contents/MacOS/Brave Bro
 PAGES=(
   "best-of-ireland-and-scotland"
   "britain-ireland-highlights"
+  "grand-european"
 )
 
 if [[ ! -x "$BRAVE_BIN" ]]; then
