@@ -241,13 +241,20 @@ a:hover{opacity:.88}
   align-self:center;
 }
 
+.hero-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+}
+
 .eyebrow{
   display:inline-flex;
   align-items:center;
   gap:8px;
   width:fit-content;
   max-width:100%;
-  margin-bottom:14px;
+  margin-bottom:0;
   padding:8px 14px;
   border-radius:999px;
   background:rgba(255,255,255,.10);
@@ -281,7 +288,6 @@ h1{
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  margin-bottom: 18px;
   border: 2px solid rgba(255,255,255,0.25);
   display: block;
 }
@@ -353,6 +359,7 @@ h1{
    ========================================================= */
 .quick-start-card{
   max-width:460px;
+  min-width:0;
   padding:1.4rem 1.45rem;
   border-radius:22px;
   backdrop-filter:blur(14px);
@@ -380,10 +387,11 @@ h1{
 }
 
 .quick-item{
-  display:flex;
-  gap:12px;
-  align-items:flex-start;
-  padding:0.45rem 0;
+  display:grid;
+  grid-template-columns:28px minmax(0, 1fr);
+  gap:10px;
+  align-items:start;
+  padding:0.35rem 0;
 }
 
 .quick-item strong{
@@ -400,16 +408,19 @@ h1{
 }
 
 .quick-icon{
-  font-size:1.2rem;
-  margin-top:2px;
-  width:22px;
-  flex:0 0 22px;
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  font-size:1.05rem;
+  line-height:1;
+  margin-top:0;
 }
 
 .quick-divider{
   height:1px;
   background:rgba(255,255,255,0.14);
-  margin:0.85rem 0;
+  margin:0.65rem 0;
 }
 
 /* =========================================================
@@ -824,6 +835,10 @@ h1{
   grid-row:span 2;
 }
 
+.tile-tall{
+  grid-row:span 2;
+}
+
 .practical-core-grid > .tile:first-child{
   grid-column:1 / -1;
 }
@@ -1084,12 +1099,16 @@ tr:last-child td{
   }
 
   .top-actions{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     justify-content:stretch;
   }
 
   .top-actions a{
-    flex:1 1 calc(50% - 4px);
+    width:100%;
     min-width:0;
+    padding-left:10px;
+    padding-right:10px;
     text-align:center;
     align-self:stretch;
   }
@@ -1102,6 +1121,17 @@ tr:last-child td{
   .hero-inner{
     min-height:auto;
     padding:28px 20px 22px;
+    gap:18px;
+  }
+
+  .hero-head{
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .hero-portrait{
+    width:64px;
+    height:64px;
   }
 
   .wrap{
@@ -1117,6 +1147,10 @@ tr:last-child td{
   }
 
   .before-travel-grid .tile-arrival-plan{
+    grid-row:auto;
+  }
+
+  .tile-tall{
     grid-row:auto;
   }
 
@@ -1159,7 +1193,25 @@ tr:last-child td{
   }
 
   .quick-start-card{
-    padding:1.5rem;
+    width:100%;
+    max-width:100%;
+    padding:1.25rem;
+  }
+
+  .quick-item{
+    grid-template-columns:24px minmax(0, 1fr);
+    gap:8px;
+  }
+
+  .quick-icon{
+    width:24px;
+    height:24px;
+  }
+
+  .quick-item p,
+  .hero-support,
+  .hero-sub{
+    overflow-wrap:break-word;
   }
 
   .inline-photo-link{
