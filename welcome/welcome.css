@@ -202,6 +202,23 @@ a:hover{opacity:.88}
     url("../images/site/joel-region-uk-edinburgh-castle.webp") center/cover no-repeat;
 }
 
+.page-ge .hero{
+  background:
+    linear-gradient(90deg, rgba(12,18,24,.70) 0%, rgba(12,18,24,.44) 36%, rgba(12,18,24,.18) 62%, rgba(12,18,24,.52) 100%),
+    linear-gradient(180deg, rgba(14,24,34,.18) 0%, rgba(14,24,34,.48) 58%, rgba(14,24,34,.78) 100%),
+    radial-gradient(circle at 72% 18%, rgba(255,232,196,.20), transparent 32%),
+    linear-gradient(120deg, rgba(114,80,52,.34), rgba(80,64,54,.26) 52%, rgba(37,41,44,.24) 88%),
+    url("../images/site/joel-region-europe-colosseum.webp") 56% 48%/cover no-repeat;
+}
+
+.page-ge .hero::before{
+  background:
+    radial-gradient(circle at 22% 22%, rgba(255,236,204,.22), transparent 13%),
+    radial-gradient(circle at 76% 18%, rgba(255,255,255,.15), transparent 12%),
+    linear-gradient(180deg, rgba(42,29,19,.06), rgba(42,29,19,.48)),
+    linear-gradient(120deg, #5c4636 0 26%, #806348 26% 46%, #6e594a 46% 70%, #2f3437 70% 100%);
+}
+
 .hero-inner{
   padding:40px 34px 30px;
   min-height:540px;
@@ -637,6 +654,68 @@ h1{
   background:#101a24;
 }
 
+.plug-modal .image-modal-panel{
+  display:grid;
+  grid-template-rows:auto minmax(0, 74px) minmax(0, 1fr) auto;
+  width:min(980px, calc(100% - 2rem));
+  height:min(820px, calc(100vh - 2rem));
+}
+
+.plug-modal-note{
+  margin:0;
+  padding:12px 14px;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.35;
+  overflow:auto;
+  border-bottom:1px solid rgba(222, 212, 198, .9);
+  background:rgba(248,246,242,.72);
+}
+
+.plug-modal-images{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  background:#101a24;
+  min-height:0;
+}
+
+.plug-modal-images img{
+  width:100%;
+  height:100%;
+  min-height:0;
+  max-height:none;
+  object-fit:contain;
+}
+
+.plug-modal-nav{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:12px 14px 14px;
+  border-top:1px solid rgba(222, 212, 198, .9);
+  background:#fff;
+}
+
+.plug-modal-nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border-radius:999px;
+  border:1px solid rgba(47,70,89,.22);
+  color:var(--brand-2);
+  background:rgba(18,79,123,.06);
+  font-size:.84rem;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.plug-modal-nav a:hover{
+  border-color:rgba(47,70,89,.5);
+  background:rgba(18,79,123,.1);
+}
+
 .image-modal-img-t1{
   transform:rotate(180deg);
 }
@@ -735,6 +814,10 @@ h1{
 
 .before-travel-grid .tile-arrival-plan{
   grid-row:span 2;
+}
+
+.practical-core-grid > .tile:first-child{
+  grid-column:1 / -1;
 }
 
 .practical-balance-grid .tile-currency{
@@ -997,7 +1080,8 @@ tr:last-child td{
   }
 
   .top-actions a{
-    flex:1 1 0;
+    flex:1 1 calc(50% - 4px);
+    min-width:0;
     text-align:center;
     align-self:stretch;
   }
@@ -1081,7 +1165,26 @@ tr:last-child td{
   }
 
   .image-modal-panel{
-    width:calc(100% - 1rem);
+    width:calc(100% - 2rem);
+  }
+
+  .plug-modal .image-modal-panel{
+    grid-template-rows:auto minmax(0, 96px) minmax(0, 1fr) auto;
+    width:calc(100% - 2rem);
+    height:min(620px, calc(100vh - 2rem));
+  }
+
+  .plug-modal-note{
+    font-size:.86rem;
+  }
+
+  .plug-modal-images{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+  }
+
+  .plug-modal-images img{
+    min-height:0;
+    max-height:none;
   }
 }
 
