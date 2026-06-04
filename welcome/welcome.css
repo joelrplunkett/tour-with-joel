@@ -490,10 +490,20 @@ h1{
 
 .tour-divider-card img{
   width:100%;
-  height:240px;
+  height:clamp(280px, 22vw, 360px);
   object-fit:cover;
   object-position:center 48%;
   display:block;
+}
+
+.tour-divider-card .tour-divider-img-pilatus{
+  object-position:center 56%;
+  filter:brightness(.99) contrast(1.03) saturate(1.03);
+}
+
+.tour-divider-card .tour-divider-img-florence{
+  object-position:center 52%;
+  filter:brightness(.98) contrast(1.04) saturate(1.05);
 }
 
 .tour-divider-card figcaption{
@@ -882,6 +892,12 @@ h1{
 
 .practical-balance-grid{
   align-items:start;
+}
+
+@media (min-width: 900px){
+  .practical-balance-grid .tile-gratuities{
+    grid-column:1 / -1;
+  }
 }
 
 /* =========================================================
