@@ -386,6 +386,10 @@ h1{
   text-wrap:pretty;
 }
 
+.quick-intro-final{
+  margin-top:10px;
+}
+
 .quick-item{
   display:grid;
   grid-template-columns:28px minmax(0, 1fr);
@@ -1048,6 +1052,28 @@ tr:last-child td{
   padding:22px;
 }
 
+.contact-card-title{
+  margin-top:0;
+}
+
+.contact-label{
+  margin:0 0 4px;
+}
+
+.contact-number{
+  margin:0 0 10px;
+  font-size:1.2rem;
+  font-weight:700;
+}
+
+.contact-helper{
+  margin:0;
+}
+
+.contact-footer-note{
+  margin-top:18px;
+}
+
 .contact-row{
   display:flex;
   gap:12px;
@@ -1188,9 +1214,6 @@ tr:last-child td{
     grid-row:auto;
   }
 
-  .practical-balance-grid .tile-currency,
-  .practical-balance-grid .tile-toilets,
-  .practical-balance-grid .tile-security,
   .practical-balance-grid .tile-optionals{
     grid-column:auto;
     grid-row:auto;
@@ -1446,9 +1469,6 @@ tr:last-child td{
     gap:8px;
   }
 
-  .practical-balance-grid .tile-currency,
-  .practical-balance-grid .tile-toilets,
-  .practical-balance-grid .tile-security,
   .practical-balance-grid .tile-optionals{
     grid-column:auto !important;
     grid-row:auto !important;
