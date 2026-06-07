@@ -19,7 +19,7 @@
        welcome/britain-ireland-highlights.html
        welcome/welcome.css
   -->
-  <link rel="stylesheet" href="welcome.css?v=20260428a" />
+  <link rel="stylesheet" href="welcome.css?v=20260607a" />
   <link rel="icon" href="../images/favicon-tourwithjoel.svg?v=20260427" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../images/favicon-tourwithjoel.png?v=20260427">
   <meta property="og:image" content="https://tourwithjoel.com/images/favicon-tourwithjoel.png?v=20260427">
@@ -606,5 +606,13 @@
   <footer class="footer">
     A personal guide from your Travel Director. For official timings, inclusions and operational details before the tour, refer to your Trafalgar documents.
   </footer>
+  <script>
+    const topbar = document.querySelector('.topbar');
+    const syncTopbar = () => {
+      topbar?.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+    syncTopbar();
+    window.addEventListener('scroll', syncTopbar, { passive: true });
+  </script>
 </body>
 </html>

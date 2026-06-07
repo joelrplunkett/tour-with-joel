@@ -8,7 +8,7 @@
     name="description"
     content="Guest-focused guided journeys across the UK, Ireland and Europe, with calm organisation and clear support from start to finish."
   />
-  <link rel="stylesheet" href="style.css?v=20260423a" />
+  <link rel="stylesheet" href="style.css?v=20260607a" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,13 +34,16 @@
         </span>
       </a>
 
-      <nav class="nav">
-        <a href="#upcoming-tours">Tours</a>
-        <a href="#about">About</a>
-        <a href="reading-list/index.html">Reading &amp; Watching</a>
-        <a href="from-the-road/index.html">From The Road</a>
-        <a href="join.html">Stay in Touch</a>
-      </nav>
+      <div class="nav-shell">
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#upcoming-tours">Tours</a>
+          <a href="#about">About</a>
+          <a href="reading-list/index.html">Reading &amp; Watching</a>
+          <a href="from-the-road/index.html">From The Road</a>
+        </nav>
+
+        <a class="nav-cta" href="join.html">Stay in Touch</a>
+      </div>
     </div>
   </header>
 
@@ -139,7 +142,7 @@
         <div class="info-grid">
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/site/glendalough-cemetary.webp" alt="Glendalough cemetery and ancient monastic landscape in Ireland" />
+              <img src="images/highlands-road.jpg" alt="Open road through a wide Highland valley in Scotland" />
             </div>
             <div class="info-card-body">
               <h3>Best of Ireland &amp; Scotland</h3>
@@ -153,7 +156,7 @@
 
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/site/york.webp" alt="Historic York streetscape in England" />
+              <img src="images/york-wider.jpg" alt="York skyline with the cathedral rising above the city" />
             </div>
             <div class="info-card-body">
               <h3>Britain &amp; Ireland Highlights</h3>
@@ -167,7 +170,7 @@
 
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/site/colosseum-inside.webp" alt="Interior arches of the Colosseum in Rome" />
+              <img src="images/alps.jpg" alt="Sunrise over the Alps above a cloud inversion" />
             </div>
             <div class="info-card-body">
               <h3>Grand European</h3>
@@ -401,5 +404,13 @@
       <div>This is an independent personal website and is not operated by any tour company.</div>
     </div>
   </footer>
+  <script>
+    const topbar = document.querySelector('.topbar');
+    const syncTopbar = () => {
+      topbar?.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+    syncTopbar();
+    window.addEventListener('scroll', syncTopbar, { passive: true });
+  </script>
 </body>
 </html>
