@@ -466,7 +466,7 @@ img { max-width: 100%; display: block; }
 .belfast-divider {
   background:
     linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.68)),
-    url("images/belfast.jpg") center / cover no-repeat;
+    url("images/belfast.jpeg") center / cover no-repeat;
 }
 
 .tour-divider-overlay {
