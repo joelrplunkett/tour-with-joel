@@ -1,11 +1,13 @@
 .from-the-road-page {
   background: #f7f4ef;
   color: #232b35;
+  --ftr-measure: 760px;
+  --ftr-wide: 1120px;
 }
 
 .ftr-hero {
   position: relative;
-  min-height: 72vh;
+  min-height: clamp(620px, 70vh, 760px);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -34,8 +36,10 @@
 .ftr-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  padding: clamp(4rem, 7vw, 6rem);
+  width: min(calc(100% - 48px), var(--ftr-wide));
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(4.4rem, 7vw, 6rem) 0 clamp(4.2rem, 7vw, 5.8rem);
   color: #f8f5f0;
 }
 
@@ -79,20 +83,80 @@
   color: rgba(248, 245, 240, 0.34);
 }
 
+.ftr-editorial-nav {
+  gap: 0;
+  margin-bottom: clamp(2.2rem, 5vw, 3.7rem);
+  color: rgba(248, 245, 240, 0.54);
+  letter-spacing: 0.12em;
+}
+
+.ftr-editorial-nav > span::before,
+.ftr-editorial-nav > a + a::before {
+  content: none;
+}
+
+.ftr-editorial-home {
+  position: relative;
+  padding-right: 0;
+  color: rgba(248, 245, 240, 0.56);
+}
+
+.ftr-editorial-home::after {
+  content: "/";
+  position: static;
+  display: inline;
+  margin: 0 0.78rem;
+  color: rgba(248, 245, 240, 0.28);
+  font-weight: 600;
+}
+
+.ftr-editorial-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  min-width: 0;
+}
+
+.ftr-editorial-links span {
+  color: rgba(248, 245, 240, 0.72);
+}
+
+.ftr-editorial-links a {
+  color: rgba(248, 245, 240, 0.54);
+}
+
+.ftr-editorial-links a[aria-current="page"] {
+  color: rgba(248, 245, 240, 0.72);
+}
+
+.ftr-editorial-links a:hover {
+  color: rgba(248, 245, 240, 0.86);
+}
+
+.ftr-editorial-links a + a::before,
+.ftr-editorial-links a + span::before,
+.ftr-editorial-links span + a::before,
+.ftr-editorial-links span + span::before {
+  content: "/";
+  margin: 0 0.78rem;
+  color: rgba(248, 245, 240, 0.28);
+  font-weight: 600;
+}
+
 .ftr-kicker {
   margin-bottom: 1rem;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  font-size: 0.76rem;
   font-weight: 700;
   opacity: 0.82;
 }
 
 .ftr-hero h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   margin: 0;
-  font-size: clamp(3rem, 7vw, 5.4rem);
-  line-height: 0.96;
-  letter-spacing: -0.04em;
+  font-size: clamp(3rem, 6.2vw, 5.05rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
 }
 
 .ftr-intro {
@@ -104,7 +168,7 @@
 }
 
 .ftr-main {
-  padding: clamp(4rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(4.2rem, 7vw, 6rem) clamp(1.5rem, 4vw, 3rem);
 }
 
 .ftr-grid {
@@ -119,14 +183,14 @@
   background: #ffffff;
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 18px 48px rgba(18, 24, 31, 0.08);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 14px 36px rgba(18, 24, 31, 0.065);
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
   isolation: isolate;
 }
 
 .ftr-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 54px rgba(18, 24, 31, 0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 42px rgba(18, 24, 31, 0.085);
 }
 
 .ftr-card-link,
@@ -220,16 +284,16 @@
 }
 
 .ftr-article {
-  padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+  padding: clamp(4.4rem, 7vw, 6.4rem) 1.5rem;
 }
 
 .ftr-article-inner {
-  max-width: 72ch;
+  max-width: var(--ftr-measure);
   margin: 0 auto;
 }
 
 .ftr-article-inner h2 {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   margin-bottom: 1.5rem;
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.05;
@@ -240,12 +304,12 @@
 .ftr-article-inner p {
   margin-bottom: 1.8rem;
   font-size: 1.12rem;
-  line-height: 1.95;
+  line-height: 1.9;
   color: #374151;
 }
 
 .ftr-inline-image {
-  margin: 5rem auto;
+  margin: 4.6rem auto;
 }
 
 .ftr-inline-image img {
@@ -283,11 +347,13 @@
 
 @media (max-width: 720px) {
   .ftr-hero {
-    min-height: 78vh;
+    min-height: 74vh;
   }
 
   .ftr-hero-content {
-    padding: 2rem 1.5rem 2.4rem;
+    width: min(398px, calc(100vw - 2rem));
+    max-width: min(398px, calc(100vw - 2rem));
+    padding: 2rem 0 2.4rem;
   }
 
   .ftr-breadcrumbs {
@@ -296,9 +362,31 @@
     font-size: 0.66rem;
   }
 
+  .ftr-editorial-nav {
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 1.8rem;
+  }
+
+  .ftr-editorial-home {
+    padding-right: 0;
+  }
+
+  .ftr-editorial-links {
+    gap: 0;
+  }
+
+  .ftr-editorial-home::after,
+  .ftr-editorial-links a + a::before,
+  .ftr-editorial-links a + span::before,
+  .ftr-editorial-links span + a::before,
+  .ftr-editorial-links span + span::before {
+    margin: 0 0.5rem;
+  }
+
   .ftr-hero h1 {
     max-width: 9ch;
-    font-size: clamp(2.7rem, 12vw, 4.4rem);
+    font-size: clamp(2.55rem, 11vw, 4.05rem);
   }
 
   .ftr-intro {
