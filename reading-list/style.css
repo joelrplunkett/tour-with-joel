@@ -520,25 +520,25 @@ img { max-width: 100%; display: block; }
 .ireland-divider {
   background:
     linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.56)),
-    url("images/ireland-divider.jpg") center / cover no-repeat;
+    url("images/ireland-divider.webp") center / cover no-repeat;
 }
 
 .dublin-divider {
   background:
     linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.62)),
-    url("images/dublin1.png") center / cover no-repeat;
+    url("images/dublin1.webp") center / cover no-repeat;
 }
 
 .scotland-divider {
   background:
     linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.58)),
-    url("images/scotland-divider.jpg") center / cover no-repeat;
+    url("images/scotland-divider.webp") center / cover no-repeat;
 }
 
 .belfast-divider {
   background:
     linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.68)),
-    url("images/belfast.jpeg") center / cover no-repeat;
+    url("images/belfast.webp") center / cover no-repeat;
 }
 
 .tour-divider-overlay {

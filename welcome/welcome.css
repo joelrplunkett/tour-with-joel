@@ -238,7 +238,7 @@ a:hover{opacity:.88}
     linear-gradient(180deg, rgba(14,24,34,.24) 0%, rgba(14,24,34,.5) 56%, rgba(14,24,34,.72) 100%),
     radial-gradient(circle at 20% 20%, rgba(255,255,255,.14), transparent 30%),
     linear-gradient(120deg, rgba(54,76,61,.34), rgba(50,76,97,.30) 50%, rgba(43,51,67,.24) 85%),
-    url("../images/site/joel-region-uk-edinburgh-castle.webp") center/cover no-repeat;
+    url("../images/joel-region-uk-edinburgh-castle.webp") center/cover no-repeat;
 }
 
 .page-ge .hero{
@@ -247,7 +247,7 @@ a:hover{opacity:.88}
     linear-gradient(180deg, rgba(14,24,34,.18) 0%, rgba(14,24,34,.48) 58%, rgba(14,24,34,.78) 100%),
     radial-gradient(circle at 72% 18%, rgba(255,232,196,.20), transparent 32%),
     linear-gradient(120deg, rgba(114,80,52,.34), rgba(80,64,54,.26) 52%, rgba(37,41,44,.24) 88%),
-    url("../images/site/joel-region-europe-colosseum.webp") 56% 48%/cover no-repeat;
+    url("../images/joel-region-europe-colosseum.webp") 56% 48%/cover no-repeat;
 }
 
 .page-ge .hero::before{
@@ -788,10 +788,6 @@ h1{
   background:rgba(18,79,123,.1);
 }
 
-.image-modal-img-t1{
-  transform:rotate(180deg);
-}
-
 .image-modal-close{
   position:absolute;
   top:10px;
@@ -935,6 +931,26 @@ h1{
 
 .practical-balance-grid{
   align-items:start;
+}
+
+.page-bbih .practical-notes-flow{
+  display:block;
+  column-count:2;
+  column-gap:16px;
+}
+
+.page-bbih .practical-notes-flow .tile{
+  display:inline-block;
+  width:100%;
+  height:auto;
+  margin:0 0 16px;
+  break-inside:avoid;
+}
+
+@media (max-width: 760px){
+  .page-bbih .practical-notes-flow{
+    column-count:1;
+  }
 }
 
 @media (min-width: 900px){
