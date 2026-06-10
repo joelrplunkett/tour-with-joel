@@ -497,6 +497,12 @@
     if (href.startsWith('#t1-') || href.startsWith('#t2-') || href.startsWith('#type-g')) {
       e.preventDefault();
       location.replace(href);
+      return;
+    }
+    if (a.classList.contains('image-modal-backdrop') || a.classList.contains('image-modal-close')) {
+      e.preventDefault();
+      location.replace(location.pathname + location.search + '#_');
+      history.replaceState(null, '', location.pathname + location.search);
     }
   });
   document.addEventListener('keydown', function(e) {

@@ -676,12 +676,11 @@
       return;
     }
 
-    // Closing a modal — clear :target (closes modal) then restore scroll before next paint
+    // Closing a modal — use #_ trick: clears :target without scrolling
     if (a.classList.contains('image-modal-backdrop') || a.classList.contains('image-modal-close')) {
       e.preventDefault();
-      var y = window.scrollY;
-      location.replace(location.pathname + location.search);
-      requestAnimationFrame(function() { window.scrollTo(0, y); });
+      location.replace(location.pathname + location.search + '#_');
+      history.replaceState(null, '', location.pathname + location.search);
     }
   });
   document.addEventListener('keydown', function(e) {
