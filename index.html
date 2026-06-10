@@ -22,9 +22,32 @@
   <link rel="stylesheet" href="style.css?v=20260608b" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="images/joel-profile-card.webp">
   <link rel="icon" href="images/favicon-tourwithjoel.svg?v=20260427" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicon-tourwithjoel.webp?v=20260427">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joel Plunkett",
+    "jobTitle": "Travel Director",
+    "url": "https://tourwithjoel.com",
+    "image": "https://tourwithjoel.com/images/joel-profile-card.webp",
+    "description": "Visitor-focused guided journeys across the UK, Ireland and Europe, with calm organisation and clear support from start to finish.",
+    "sameAs": [
+      "https://instagram.com/tourwithjoel",
+      "https://www.facebook.com/profile.php?id=61575371429247"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Trafalgar"
+    },
+    "areaServed": ["United Kingdom", "Ireland", "Europe"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -99,7 +122,7 @@
     <section class="section" id="about">
       <div class="container narrow">
         <div class="section-intro">
-          <img class="about-portrait" src="images/joel-profile-card.webp" alt="Joel Plunkett, Travel Director" />
+          <img class="about-portrait" src="images/joel-profile-card.webp" alt="Joel Plunkett, Travel Director" width="1123" height="1401" />
           <div class="kicker">Your Tour Director</div>
           <h2>Experienced guidance, calmly delivered.</h2>
         </div>
@@ -129,15 +152,15 @@
     <section class="photo-cluster-section" aria-label="Tour highlights">
       <div class="photo-cluster photo-cluster-tour-strip">
         <figure class="photo-cluster-card photo-cluster-card-mood">
-          <img src="images/joel-strip-kylemore-abbey.webp" alt="Kylemore Abbey and lake in Connemara, Ireland" />
+          <img src="images/joel-strip-kylemore-abbey.webp" alt="Kylemore Abbey and lake in Connemara, Ireland" width="2157" height="1428" />
           <figcaption class="photo-cluster-label">KYLEMORE ABBEY · CONNEMARA</figcaption>
         </figure>
         <figure class="photo-cluster-card photo-cluster-card-sea">
-          <img src="images/lake-lucerne.webp" alt="Lake Lucerne with alpine backdrop and clear water" />
+          <img src="images/lake-lucerne.webp" alt="Lake Lucerne with alpine backdrop and clear water" width="2200" height="1087" />
           <figcaption class="photo-cluster-label">LAKE LUCERNE · SWITZERLAND</figcaption>
         </figure>
         <figure class="photo-cluster-card photo-cluster-card-soft">
-          <img src="images/joel-strip-highlands-landscape.webp" alt="Scottish Highlands landscape under dramatic sky" />
+          <img src="images/joel-strip-highlands-landscape.webp" alt="Scottish Highlands landscape under dramatic sky" width="2160" height="900" />
           <figcaption class="photo-cluster-label">GLENMORISTON · SCOTTISH HIGHLANDS</figcaption>
         </figure>
       </div>
@@ -156,7 +179,7 @@
         <div class="info-grid">
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/highlands-road.webp" alt="Open road through a wide Highland valley in Scotland" />
+              <img src="images/highlands-road.webp" alt="Open road through a wide Highland valley in Scotland" width="2200" height="1650" />
             </div>
             <div class="info-card-body">
               <h3>Best of Ireland &amp; Scotland</h3>
@@ -170,7 +193,7 @@
 
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/york-wider.webp" alt="York skyline with the cathedral rising above the city" />
+              <img src="images/york-wider.webp" alt="York skyline with the cathedral rising above the city" width="2200" height="1467" />
             </div>
             <div class="info-card-body">
               <h3>Britain &amp; Ireland Highlights</h3>
@@ -184,7 +207,7 @@
 
           <div class="info-card">
             <div class="tour-card-image">
-              <img src="images/alps.webp" alt="Sunrise over the Alps above a cloud inversion" />
+              <img src="images/alps.webp" alt="Sunrise over the Alps above a cloud inversion" width="2200" height="1467" />
             </div>
             <div class="info-card-body">
               <h3>Grand European</h3>
@@ -207,6 +230,7 @@
               class="story-image story-image-road"
               src="images/coach-glencoe-road-ahead.webp"
               alt="Open road through Glencoe in the Scottish Highlands"
+              width="2200" height="2596"
             />
             <div class="story-image-label">A82 · GLENCOE</div>
           </div>
@@ -245,22 +269,22 @@
 
         <div class="gallery-grid">
           <figure class="gallery-card gallery-card-feature">
-            <img src="images/joel-pick-lion-monument-1.webp" alt="Lion Monument in Lucerne, Switzerland carved into stone" />
+            <img src="images/joel-pick-lion-monument-1.webp" alt="Lion Monument in Lucerne, Switzerland carved into stone" width="2200" height="1650" />
             <figcaption>Lucerne's Lion Monument.</figcaption>
           </figure>
 
           <figure class="gallery-card">
-            <img src="images/joel-gallery-gondola-venice-edited.webp" alt="Gondola gliding along a Venice canal with historic buildings and warm light" />
+            <img src="images/joel-gallery-gondola-venice-edited.webp" alt="Gondola gliding along a Venice canal with historic buildings and warm light" width="2160" height="2160" />
             <figcaption>Venice by gondola.</figcaption>
           </figure>
 
           <figure class="gallery-card">
-            <img src="images/joel-gallery-lomond-boat-edited.webp" alt="Boat on Loch Lomond beneath a bright sky" />
+            <img src="images/joel-gallery-lomond-boat-edited.webp" alt="Boat on Loch Lomond beneath a bright sky" width="2086" height="1406" />
             <figcaption>Loch Lomond by boat.</figcaption>
           </figure>
 
           <figure class="gallery-card gallery-card-portrait">
-            <img src="images/joel-gallery-heritage-eilean-donan.webp" alt="Eilean Donan Castle beside Highland water in Scotland" />
+            <img src="images/joel-gallery-heritage-eilean-donan.webp" alt="Eilean Donan Castle beside Highland water in Scotland" width="5599" height="3733" />
             <figcaption>Eilean Donan Castle.</figcaption>
           </figure>
         </div>
