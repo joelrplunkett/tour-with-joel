@@ -686,9 +686,8 @@
   });
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && location.hash) {
-      var y = window.scrollY;
-      location.replace(location.pathname + location.search);
-      requestAnimationFrame(function() { window.scrollTo(0, y); });
+      location.replace(location.pathname + location.search + '#_');
+      history.replaceState(null, '', location.pathname + location.search);
     }
   });
 </script>
