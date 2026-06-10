@@ -638,6 +638,13 @@
       requestAnimationFrame(function() { window.scrollTo(0, y); });
     }
   });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && location.hash) {
+      var y = window.scrollY;
+      location.replace(location.pathname + location.search);
+      requestAnimationFrame(function() { window.scrollTo(0, y); });
+    }
+  });
 </script>
 
 </body>
