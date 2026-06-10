@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Welcome &amp; Tour Tips | Grand European</title>
-  <meta name="description" content="Welcome &amp; Tour Tips before departure for travellers on Grand European with Joel." />
+  <!-- TOUR: Update title with tour name -->
+  <title>Welcome &amp; Tour Tips | TOUR NAME</title>
+  <!-- TOUR: Update meta description with tour name -->
+  <meta name="description" content="Welcome &amp; Tour Tips before departure for travellers on TOUR NAME with Joel." />
 
   <link rel="stylesheet" href="welcome.css?v=20260610v6" />
   <link rel="icon" href="../images/favicon-tourwithjoel.svg?v=20260427" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../images/favicon-tourwithjoel.webp?v=20260427">
 </head>
 
+<!-- TOUR: Change page-ge to a new class (e.g. page-xx) and add the hero background image
+     in welcome.css under .page-xx .hero { background-image: url(...) }
+     Copy the existing .page-ge block in the CSS as a starting point. -->
 <body class="page-ge page-v2">
 
 <header class="topbar">
@@ -20,7 +25,8 @@
       <div class="crest"><img src="../images/favicon-tourwithjoel.svg" alt="Tour with Joel logo" /></div>
       <div class="brand-text">
         <strong>Welcome &amp; Tour Tips</strong>
-        <span>Grand European</span>
+        <!-- TOUR: Tour name in topbar -->
+        <span>TOUR NAME</span>
       </div>
     </div>
 
@@ -40,17 +46,19 @@
       <div class="hero-copy">
         <div class="hero-head">
           <img class="hero-portrait" src="../images/joel_profile_card.webp" alt="Joel Plunkett, Travel Director" />
-          <div class="eyebrow">Grand European</div>
+          <!-- TOUR: Eyebrow pill — tour name -->
+          <div class="eyebrow">TOUR NAME</div>
         </div>
 
         <h1>Welcome &amp; Tour Tips</h1>
 
+        <!-- TOUR: Update meeting city -->
         <p class="hero-sub">
-          Good to have you here. This page covers the practical things worth knowing before we meet in London.
+          Good to have you here. This page covers the practical things worth knowing before we meet in CITY.
         </p>
 
         <p class="hero-support">
-          You do not need to remember everything. Once the tour begins, I’ll guide everyone through things step by step.
+          You do not need to remember everything. Once the tour begins, I'll guide everyone through things step by step.
         </p>
 
         <p class="hero-support">
@@ -58,8 +66,11 @@
         </p>
       </div>
 
+      <!-- TOUR: Quick-start card — review all three items.
+           Item 3 is currently Eurostar/St Pancras specific — replace for other tours. -->
       <aside class="quick-start-card">
-        <h2>Before we meet in London</h2>
+        <!-- TOUR: Update meeting city in heading -->
+        <h2>Before we meet in CITY</h2>
         <p class="quick-intro">If you only read one thing, read this:</p>
 
         <div class="quick-item">
@@ -71,13 +82,15 @@
 
         <div class="quick-item">
           <div class="quick-icon">📍</div>
-          <p>Know your London hotel and where we are meeting on departure morning.</p>
+          <!-- TOUR: Update joining location detail -->
+          <p>Know your joining hotel and where we are meeting on departure morning.</p>
         </div>
 
         <div class="quick-divider"></div>
 
         <div class="quick-item">
           <div class="quick-icon">🧳</div>
+          <!-- TOUR: Update or replace — this is Eurostar/St Pancras specific -->
           <p>Use luggage that rolls easily. We have a short walk through St Pancras before Eurostar.</p>
         </div>
 
@@ -103,47 +116,59 @@
   </nav>
 
   <div class="page-tools">
-    <a class="page-tool-link" href="grand-european.pdf" download>↓ Download guide</a>
+    <!-- TOUR: Update PDF filename -->
+    <a class="page-tool-link" href="TOUR-NAME.pdf" download>↓ Download guide</a>
     <a class="page-tool-link" href="#" onclick="window.print(); return false;">🖨 Print / save PDF</a>
   </div>
 
+  <!-- ============================================================
+       TOUR: FIRST DAY — replace entirely for each tour.
+       This section is 100% route-specific (Eurostar, Bruges, etc).
+       Keep the section structure; rewrite the tiles.
+       ============================================================ -->
   <section class="section priority-section" id="first-day">
     <div class="section-kicker">OUR FIRST DAY</div>
 
     <div class="section-header">
       <div class="section-icon">🚂</div>
       <div>
-        <h2>London, Eurostar and Bruges</h2>
+        <!-- TOUR: First day heading — update with actual first day route/highlight -->
+        <h2>CITY, TRANSPORT and FIRST DESTINATION</h2>
+        <!-- TOUR: First day lede — describe what the day involves -->
         <p class="lede">
-          Our first day is a travel day and a touring day in one. We begin in London, travel by Eurostar to Belgium, and arrive into Bruges in time to begin exploring.
+          Our first day is a travel day and a touring day in one. [Describe the day briefly.]
         </p>
       </div>
     </div>
 
     <div class="grid arrival-grid">
+      <!-- TOUR: Replace these four tiles with first-day specifics for this tour -->
+
       <div class="tile priority-tile">
-        <h3>🚂 The Eurostar</h3>
-        <p>Our first journey together is the Eurostar from London St Pancras to Belgium — through the Channel Tunnel and into continental Europe.</p>
-        <p>From Belgium we continue on to Bruges, where the first proper afternoon of the tour begins.</p>
+        <h3>🚂 The journey</h3>
+        <!-- TOUR: Describe the main transport of day 1 -->
+        <p>Describe the main outbound journey here.</p>
       </div>
 
       <div class="tile priority-tile">
-        <h3>🧳 St Pancras</h3>
-        <p>Before boarding, everyone manages their own main suitcase through the terminal: security, UK and French passport control, the departure lounge, and down to the platform. The luggage travels on the train with you.</p>
-        <p>A suitcase that rolls easily makes this noticeably calmer. A heavy or awkward case can make the terminal feel much longer than it is.</p>
-        <p>Your Eurostar tickets will be with me — I’ll hand them out in the hotel lobby on departure morning. You do not need to print anything in advance.</p>
+        <h3>🧳 The terminal / departure point</h3>
+        <!-- TOUR: Describe what guests need to manage themselves at departure -->
+        <p>Describe what guests handle themselves (check-in, security, passport control, etc.).</p>
+        <p>Your tickets / boarding information — describe how this is handled.</p>
       </div>
 
       <div class="tile priority-tile">
         <h3>👟 Dress for the day</h3>
-        <p>Day 1 is a travel day and a sightseeing afternoon in one. Leave your London hotel dressed for both — comfortable shoes especially.</p>
+        <!-- TOUR: Adapt if day 1 is different (mostly travel vs sightseeing, etc.) -->
+        <p>Day 1 is a travel day and a sightseeing afternoon in one. Leave your hotel dressed for both — comfortable shoes especially.</p>
         <p>Older European cities are a mix of cobblestones and uneven pavement, and the first afternoon is no exception. Good shoes make a real difference from the very start.</p>
       </div>
 
       <div class="tile priority-tile">
         <h3>👋 Once we meet</h3>
-        <p>Once we are together, I’ll walk everyone through the morning step by step — where to be, what to have ready, and what comes next.</p>
-        <p>For now, arrive into London knowing your hotel and joining details, with the important things easy to reach.</p>
+        <p>Once we are together, I'll walk everyone through the morning step by step — where to be, what to have ready, and what comes next.</p>
+        <!-- TOUR: Update joining city -->
+        <p>For now, arrive into CITY knowing your hotel and joining details, with the important things easy to reach.</p>
       </div>
     </div>
   </section>
@@ -163,9 +188,10 @@
 
     <div class="grid arrival-grid">
       <div class="tile">
+        <!-- TOUR: Update if no Eurostar/passport control on day 1 — adjust the passport tile -->
         <h3>🛂 Passport &amp; travel documents</h3>
-        <p>Keep your passport with you on departure morning — do not pack it in your main suitcase. You will need it for Eurostar check-in and immigration at St Pancras.</p>
-        <p>In Italy, you may be asked to show ID at any time — keep your passport or a clear copy with you on those days.</p>
+        <p>Keep your passport with you on departure morning — do not pack it in your main suitcase. You will need it for check-in and immigration.</p>
+        <p>If your travel documents mention any additional ID, keep that easy to reach as well.</p>
       </div>
 
       <div class="tile">
@@ -187,10 +213,11 @@
     </div>
   </section>
 
+  <!-- TOUR: Tour divider image 1 — replace src, alt text and figcaption with a relevant image for this tour -->
   <section class="tour-divider">
     <figure class="tour-divider-card">
-      <img class="tour-divider-img-pilatus" src="images/pilatus_view.webp" alt="View from Mount Pilatus over Lake Lucerne and the Swiss Alps" />
-      <figcaption>MOUNTAIN VIEWS · SWITZERLAND</figcaption>
+      <img class="tour-divider-img-pilatus" src="images/DIVIDER_IMAGE_1.webp" alt="DESCRIBE IMAGE" />
+      <figcaption>LOCATION · COUNTRY</figcaption>
     </figure>
   </section>
 
@@ -200,7 +227,7 @@
     <div class="section-header">
       <div class="section-icon">💡</div>
       <div>
-        <h2>Before you pack</h2>
+        <h2>Worth reading before you pack</h2>
         <p class="lede">
           These are the details that tend to make the biggest practical difference.
         </p>
@@ -210,20 +237,24 @@
     <div class="grid">
       <div class="tile">
         <h3>👟 Walking shoes</h3>
+        <!-- TOUR: Adjust if terrain / walking profile differs significantly -->
         <p>This tour covers a lot of ground: cobblestones, old town centres, viewpoints, station platforms and long sightseeing afternoons.</p>
         <p>Comfortable, well-worn shoes make a genuine difference — not just on the first day, but across the whole tour. If you are unsure which pair to bring, bring your most comfortable ones.</p>
       </div>
 
       <div class="tile">
         <h3>🌦️ Weather and layers</h3>
+        <!-- TOUR: Update for the specific climate/region of this tour -->
         <p>European weather is more variable than many people expect. Northern Europe can be cool and changeable. Switzerland feels noticeably cooler at altitude — even in summer. Southern destinations are warmer, but evenings can still be fresh.</p>
         <p>A light packable layer and a compact waterproof solve most situations. Sun protection matters more on this tour than many people plan for — particularly on Alpine days and at outdoor viewpoints.</p>
       </div>
 
       <div class="tile">
         <h3>🔌 Power adapters</h3>
+        <!-- TOUR: Update countries visited — the plug guide link below must match your plug modals -->
         <p>Most guests on this tour will need at least one adapter. UK plugs are different from continental European plugs — and both are different from most plugs used outside Europe.</p>
         <p>Switzerland and Italy can also vary from the standard continental plug, which is why a universal travel adapter with USB and USB-C ports is the simplest solution for the whole tour.</p>
+        <!-- TOUR: This link opens the plug modal — keep #plug-uk as the entry point -->
         <p><a class="inline-photo-link" href="#plug-uk">Power plug guide</a></p>
       </div>
 
@@ -236,7 +267,7 @@
     </div>
 
     <div class="note soft-note">
-      <strong>Luggage allowance:</strong> 1 suitcase up to 23kg / 50lbs, plus 1 soft hand-luggage bag. The hand bag must be soft-sided with no wheels or telescopic handle — space on the coach is limited and soft bags fit much more easily. Label both bags clearly before leaving home.<br><br>🧺 <strong>Laundry:</strong> On a tour of this length, most people are glad to freshen up the wardrobe somewhere along the way. I’ll point out the best opportunity once we are underway.
+      <strong>Luggage allowance:</strong> 1 suitcase up to 23kg / 50lbs, plus 1 soft hand-luggage bag. The hand bag must be soft-sided with no wheels or telescopic handle — space on the coach is limited and soft bags fit much more easily. Label both bags clearly before leaving home.<br><br>🧺 <strong>Laundry:</strong> On a tour of this length, most people are glad to freshen up the wardrobe somewhere along the way. I'll point out the best opportunity once we are underway.
     </div>
   </section>
 
@@ -246,34 +277,31 @@
     <div class="section-header">
       <div class="section-icon">🚌</div>
       <div>
-        <h2>The rhythm of it</h2>
+        <h2>How the tour tends to feel</h2>
       </div>
     </div>
 
     <div class="rhythm-panel">
       <p>
-        Some days are about movement itself — watching the landscape outside the coach window slowly change as we cross through different parts of Europe. One morning you will be in the Low Countries, by evening looking at Alpine scenery, and a few days later trying to process the beautiful chaos and energy of Italy.
+        Some days are about movement — scenic drives, border crossings, comfort stops and watching Europe change outside the coach window.
       </p>
       <p>
-        Other days are slower and more about being somewhere properly — old town streets, local guides, viewpoints, long dinners, cafés, cathedrals, and enough time to wander rather than simply ticking places off.
+        Other days are more about exploring: cobblestones, old towns, local guides, viewpoints, meals together and a bit of free time.
       </p>
       <p>
-        There will be early starts at times, busy breakfast rooms, hotel lobbies full of luggage, changing weather, and long travel days mixed in with quieter ones. That is simply the rhythm of a journey like this.
+        There may be early starts, busy breakfast rooms, hotel lobbies with luggage moving around, or weather that changes during the day. That is normal touring, not a sign that anything has gone wrong.
       </p>
       <p>
-        The cadence of this itinerary is part of what makes it so good. The Low Countries ease you in gently. The Alps shift the scale of things completely. Italy feels louder, busier, more emotional in the best possible way — and then France arrives at the end with a completely different kind of elegance.
-      </p>
-      <p>
-        We take it step by step. I’ll always let you know what’s coming up, what’s worth having with you for the day, and what you can leave on the coach and not worry about yet.
+        We adapt, keep things moving, and take it one step at a time. You won't need to carry everything with you each day, and I'll explain what is worth having handy before we set off.
       </p>
     </div>
 
     <div class="grid">
       <div class="tile">
         <h3>🚌 On the coach</h3>
-        <p>Seat rotation happens daily, and I’ll explain the system clearly.</p>
-        <p>Snacks are absolutely fine. Just avoid hot food, hot drinks and anything likely to melt, spill or perfume the entire coach by lunchtime. Please keep your seat area tidy — it’s a shared space and it makes a real difference to everyone’s day.</p>
-        <p>Seatbelts on whenever you are seated — it’s a simple habit that matters.</p>
+        <p>Seat rotation happens daily, and I'll explain the system clearly.</p>
+        <p>Snacks are absolutely fine. Just avoid hot food, hot drinks, ice cream or anything messy or strongly scented on board. Please keep your seat area tidy — it's a shared space and it makes a real difference to everyone's day.</p>
+        <p>Seatbelts on whenever you are seated, please.</p>
       </div>
 
       <div class="tile">
@@ -295,14 +323,15 @@
       </div>
 
       <div class="tile">
-        <h3>⏰ Tour timings & inclusions</h3>
+        <h3>⏰ Tour timings &amp; inclusions</h3>
         <p>Our days run to a schedule. Being ready on time — for departures, meals and activities — keeps things on track for everyone in the group.</p>
         <p>I'll always let you know what's coming up and what to be prepared for. All we ask is that you're there on time, ready to go.</p>
       </div>
 
       <div class="tile">
+        <!-- TOUR: Update city names in the security tile to match this tour's route -->
         <h3>🔒 Security</h3>
-        <p>Keep your passport, cards and valuables secure and close to you, especially in busier tourist areas — Rome, Venice and Florence in particular. A small bag that stays close to your body is worth considering for those days.</p>
+        <p>Keep your passport, cards and valuables secure and close to you, especially in busier tourist areas — <strong>CITY 1, CITY 2 and CITY 3</strong> in particular. A small bag that stays close to your body is worth considering for those days.</p>
         <p>A little awareness in crowded places goes a long way.</p>
       </div>
     </div>
@@ -352,13 +381,15 @@
     <div class="grid practical-balance-grid">
       <div class="tile tile-optionals">
         <h3>⭐ Optional experiences</h3>
-        <p>Optional experiences are available throughout the tour, and in my experience they’re often the moments that stick — a chance to go a bit further into the places we’re already visiting, in a way that’s hard to organise on your own.</p>
-        <p>I’ll walk you through everything once we’re underway. No pressure at all, but worth keeping an open mind.</p>
+        <p>Optional experiences are available throughout the tour, and in my experience they're often the moments that stick — a chance to go a bit further into the places we're already visiting, in a way that's hard to organise on your own.</p>
+        <p>I'll walk you through everything once we're underway. No pressure at all, but worth keeping an open mind.</p>
       </div>
 
       <div class="tile">
+        <!-- TOUR: Update currencies for this tour's countries -->
         <h3>💳 Money &amp; cards</h3>
         <p>Cards are widely accepted, but a small amount of cash can still be useful for smaller cafes, markets, local purchases or gratuities.</p>
+        <!-- TOUR: Update the currency breakdown to match this tour's route -->
         <p>London is Pounds Sterling (GBP), but once we are in Europe most countries use the Euro, and Switzerland uses Swiss Franc. For many travellers, small ATM withdrawals are simpler than carrying large amounts from home.</p>
       </div>
 
@@ -407,10 +438,11 @@
     </div>
   </section>
 
+  <!-- TOUR: Tour divider image 2 — replace src, alt text and figcaption with a relevant image for this tour -->
   <section class="tour-divider">
     <figure class="tour-divider-card">
-      <img class="tour-divider-img-florence" src="images/florence_view2.webp" alt="Florence skyline at sunset with the Duomo and Arno River" />
-      <figcaption>FLORENCE · ITALY</figcaption>
+      <img class="tour-divider-img-florence" src="images/DIVIDER_IMAGE_2.webp" alt="DESCRIBE IMAGE" />
+      <figcaption>LOCATION · COUNTRY</figcaption>
     </figure>
   </section>
 
@@ -419,12 +451,23 @@
       <div class="section-icon">✨</div>
       <div>
         <h2>Final note</h2>
+        <!-- TOUR: Update sign-off to reference this tour and meeting city -->
         <p class="lede">
-          There’s a lot of Europe ahead of us, and I’m looking forward to every part of it. See you in London.
+          There's a lot ahead of us, and I'm looking forward to every part of it. See you in CITY.
         </p>
       </div>
     </div>
   </section>
+
+  <!-- ============================================================
+       TOUR: PLUG MODALS
+       This set covers the Grand European route:
+       UK → Belgium → Netherlands → Germany → Austria → France → Switzerland → Italy
+       For a different tour, add/remove country modals as needed.
+       - The nav links (Previous/Next) must form a complete cycle.
+       - The entry point from the Power plug guide link above is #plug-uk.
+       - All backdrop/close href values go to #good-to-know (or update to match your section).
+       ============================================================ -->
 
   <aside id="plug-uk" class="image-modal plug-modal" aria-labelledby="plug-uk-title" aria-modal="true" role="dialog">
     <a class="image-modal-backdrop" href="#must-know" aria-label="Close"></a>
@@ -440,7 +483,9 @@
         <img src="images/power plugs/electricity-tiles-type-G.jpg" alt="UK Type G plug and socket reference tiles." />
       </div>
       <nav class="plug-modal-nav" aria-label="Power plug image navigation">
+        <!-- TOUR: Update Previous to last country in your cycle -->
         <a href="#plug-italy">Previous</a>
+        <!-- TOUR: Update Next to second country in your cycle -->
         <a href="#plug-belgium">Next</a>
       </nav>
       <a class="image-modal-close" href="#must-know" aria-label="Close popup">Close</a>
@@ -595,6 +640,7 @@
       </div>
       <nav class="plug-modal-nav" aria-label="Power plug image navigation">
         <a href="#plug-switzerland">Previous</a>
+        <!-- TOUR: Update Next to first country in your cycle (wraps back to UK) -->
         <a href="#plug-uk">Next</a>
       </nav>
       <a class="image-modal-close" href="#must-know" aria-label="Close popup">Close</a>
@@ -630,12 +676,10 @@
       return;
     }
 
-    // Closing a modal — clear :target (closes modal) then restore scroll before next paint
+    // Closing a modal — strip hash without scrolling
     if (a.classList.contains('image-modal-backdrop') || a.classList.contains('image-modal-close')) {
       e.preventDefault();
-      var y = window.scrollY;
       location.replace(location.pathname + location.search);
-      requestAnimationFrame(function() { window.scrollTo(0, y); });
     }
   });
 </script>
