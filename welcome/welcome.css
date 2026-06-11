@@ -181,6 +181,33 @@ a:hover{opacity:.88}
   overflow:hidden;
 }
 
+.contact-pill-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.contact-pill{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 16px;
+  border-radius:999px;
+  border:1px solid var(--line-soft);
+  font-size:.9rem;
+  font-weight:600;
+  color:var(--ink);
+  background:var(--surface);
+  transition:background .18s ease, border-color .18s ease;
+  text-decoration:none;
+}
+
+.contact-pill:hover{
+  background:rgba(242,239,234,.82);
+  border-color:var(--line);
+  opacity:1;
+}
+
 .contact-link-row{
   display:flex;
   align-items:center;
@@ -1002,6 +1029,7 @@ h1{
 
 .practical-balance-grid{
   align-items:start;
+  grid-template-columns:1fr;
 }
 
 .page-bbih .practical-notes-flow{
@@ -1024,11 +1052,6 @@ h1{
   }
 }
 
-@media (min-width: 900px){
-  .practical-balance-grid .tile-gratuities{
-    grid-column:1 / -1;
-  }
-}
 
 /* =========================================================
    SIMPLE BULLET LIST INSIDE CARDS
@@ -1886,6 +1909,12 @@ tr:last-child td{
 
 .page-v2 .tile-gratuities p,
 .page-v2 .tile-gratuities li,
+.page-v2 .tile-optionals p,
+.page-v2 .tile-optionals li,
+.page-v2 .tile-departure p,
+.page-v2 .tile-departure li,
+.page-v2 .practical-balance-grid .tile p,
+.page-v2 .practical-balance-grid .tile li,
 .page-v2 .lede{
   max-width:none;
 }

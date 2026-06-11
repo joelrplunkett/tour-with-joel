@@ -1242,6 +1242,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  #upcoming-tours .info-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero-inner {
     min-height: auto;
     padding: 2rem;
