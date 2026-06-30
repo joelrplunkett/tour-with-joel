@@ -237,6 +237,55 @@
       margin: 0 auto;
     }
 
+    /* ── TOUR ASIDE ── */
+    .tour-aside {
+      margin-top: 12px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      background: rgba(255,248,220,.7);
+      border-left: 3px solid #c9a84c;
+      font-size: .86rem;
+      color: #5a4a1a;
+      font-style: italic;
+      line-height: 1.55;
+    }
+    .tour-aside strong { font-style: normal; color: #7a5f10; }
+
+    /* ── CARD IMAGE ── */
+    .place-card-img {
+      float: right;
+      width: 110px;
+      height: 110px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 0 10px 14px;
+      flex-shrink: 0;
+    }
+    .place-card-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .place-card::after { content: ''; display: table; clear: both; }
+
+    /* ── MAP BANNER ── */
+    .map-banner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--card-bg);
+      text-decoration: none;
+      color: var(--text);
+      transition: background .15s;
+    }
+    .map-banner:hover { background: var(--accent-bg); }
+    .map-banner-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .map-banner-text { flex: 1; }
+    .map-banner-text strong { display: block; font-size: .97rem; color: var(--text); }
+    .map-banner-text span { font-size: .82rem; color: var(--muted); }
+    .map-banner-arrow { font-size: 1.2rem; color: var(--brand); flex-shrink: 0; }
+
     /* ── MOBILE ── */
     @media (max-width: 520px) {
       .place-card-header { flex-direction: column; gap: 8px; }
@@ -261,8 +310,6 @@
   <div class="nav-strip-inner">
     <a class="nav-pill" href="#gelato">🍦 Gelato</a>
     <a class="nav-pill" href="#sandwiches">🥪 Lunch</a>
-    <a class="nav-pill" href="#via-dei-neri">🍷 Via dei Neri</a>
-    <a class="nav-pill" href="#dinner">🥩 Dinner</a>
     <a class="nav-pill" href="#shopping">🛍 Shopping</a>
     <a class="nav-pill" href="#wine-windows">🍷 Wine Windows</a>
   </div>
@@ -272,11 +319,14 @@
 
   <!-- MAP -->
   <div class="map-block">
-    <!-- Replace this placeholder with your Google My Maps iframe -->
-    <div class="map-placeholder">
-      <div class="map-placeholder-icon">📍</div>
-      <div>Interactive map with all pins coming soon.<br>Each place below links directly to Google Maps.</div>
-    </div>
+    <a class="map-banner" href="https://www.google.com/maps/d/viewer?mid=1yp--Ey-iCqGLOcqJdsad_Po4kSXK0xs" target="_blank" rel="noopener noreferrer">
+      <div class="map-banner-icon">📍</div>
+      <div class="map-banner-text">
+        <strong>Open all locations in Maps</strong>
+        <span>Florence Favourites · Google Maps with Pins</span>
+      </div>
+      <div class="map-banner-arrow">→</div>
+    </a>
   </div>
 
   <!-- GELATO -->
@@ -284,6 +334,7 @@
     <div class="section-label">🍦 Gelato</div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/la-carraia-thumbnail.png" alt="La Carraia gelateria, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">La Carraia</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/L2B5sd4rNEmvBMKP6" target="_blank" rel="noopener noreferrer">
@@ -296,6 +347,7 @@
     </div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/gelateria-dei-neri-thumbnail.jpg" alt="Gelateria dei Neri, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Gelateria dei Neri</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/hxVccfRSmk1FWEcg6" target="_blank" rel="noopener noreferrer">
@@ -312,6 +364,7 @@
     </div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/affogato-caffe-crema-thumbnail- vivoli.webp" alt="La gran crema al caffè at Vivoli, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Vivoli</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/Jx6m81b2afmmGLEYA" target="_blank" rel="noopener noreferrer">
@@ -330,6 +383,7 @@
     <div class="section-label">🥪 Sandwiches &amp; Lunch</div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/pinos-thumbnail.jpg" alt="Pino's Sandwiches, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Pino's Sandwiches (Salumeria Verdi)</div>
         <a class="maps-btn" href="https://www.google.com/maps/search/Salumeria+Verdi+Pino+Florence+Italy" target="_blank" rel="noopener noreferrer">
@@ -338,10 +392,14 @@
         </a>
       </div>
       <p>One of Florence's favourite local sandwich shops, Pino's has built a loyal following thanks to generous fillings, fresh ingredients and the owner's unforgettable personality. While other sandwich shops attract the crowds, this is where many guides, students and locals still head for lunch.</p>
-      <div class="dont-miss">Ask Pino for his recommendation — he rarely disappoints.</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        <a href="https://linktr.ee/pinossandwiches" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">Website</a>
+        <a href="https://www.instagram.com/pinossandwiches/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
+      </p>
     </div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/all-antico-thumbnail.png" alt="All'Antico Vinaio, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">All'Antico Vinaio</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/x6erug4zoqbHmP366" target="_blank" rel="noopener noreferrer">
@@ -349,34 +407,35 @@
           Maps
         </a>
       </div>
-      <p>Probably Florence's most famous sandwich shop — and the birthplace of a global phenomenon. Italy has never really embraced fast-food chains in the same way as Australia, New Zealand or the United States. Instead, Italians have traditionally grabbed a fresh sandwich from a local bakery or delicatessen. All'Antico Vinaio took that tradition and transformed it into an international success story.</p>
-      <p>Founded here on Via dei Neri in 1989, it has grown from a single neighbourhood shop into a worldwide brand with locations across Europe, North America and the Middle East. Yet this remains the original store that introduced Florentine schiacciata to millions of people.</p>
+      <p>The original shop that turned Florentine schiacciata into a worldwide phenomenon. <em>Schiacciata</em> literally means "pressed flat" — a traditional Tuscan flatbread that's crisp on the outside, soft inside and perfect for generous fillings. Founded here on Via dei Neri in 1989, it has since grown into an international brand with locations across Europe, North America and the Middle East. This is where it all started. Expect queues, but they move quickly.</p>
       <div class="dont-miss">A classic schiacciata filled with Tuscan cured meats, pecorino and truffle cream.</div>
+      <div class="tour-aside">💬 <strong>Did you know?:</strong> If anyone plays volleyball, you may know a schiacciata is also a spike — same idea of pressing something down. Fortunately here they're only smashing the bread before filling it with delicious Tuscan ingredients."</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        <a href="https://www.allanticovinaio.com" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">Website</a>
+        <a href="https://www.instagram.com/allanticovinaiofirenze/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
+      </p>
     </div>
-  </section>
-
-  <!-- VIA DEI NERI -->
-  <section class="city-section" id="via-dei-neri">
-    <div class="section-label">🍷 Via dei Neri</div>
-
-    <div class="area-card">
-      <div class="place-card-header">
-        <div class="place-name">Via dei Neri — Florence's Food Street</div>
-        <a class="maps-btn" href="https://maps.app.goo.gl/x6erug4zoqbHmP366" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          View Street
-        </a>
-      </div>
-      <p>If Florence had a street dedicated to food, this would be it. This narrow medieval lane has evolved into one of the city's best places to eat, lined with sandwich shops, wine bars, gelaterias and traditional trattorias. It's lively throughout the day and evening — wander, browse the menus and follow whatever smells the best.</p>
-      <div class="dont-miss">Return in the evening for an aperitivo before dinner.</div>
-    </div>
-  </section>
-
-  <!-- DINNER -->
-  <section class="city-section" id="dinner">
-    <div class="section-label">🥩 Dinner</div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/ifratellini-thumbnail.png" alt="I Fratellini, Florence" /></div>
+      <div class="place-card-header">
+        <div class="place-name">I Fratellini</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/R82vJXS1vvwHvNbx5" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>I Fratellini has occupied the same tiny opening in a wall on Via dei Cimatori since 1875. It is, in every sense, a hole in the wall — a narrow hatch, no seating, no menu board beyond a handwritten list on the wall. You order, you step aside, you eat on the street.</p>
+      <p>In a city full of famous sandwich shops, this is the one that hasn't changed. Locals, students and guides in the know have been coming here for generations. The name means "the little brothers" — a nod to its origins as a small family operation that somehow outlasted everything around it.</p>
+      <div class="dont-miss">Order whatever is on the board — the combinations are simple, the quality is consistent.</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        <a href="https://www.instagram.com/ifratellini_1875/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
+      </p>
+    </div>
+
+
+    <div class="place-card">
+      <div class="place-card-img"><img src="../images/red-garter-burger.jpg" alt="Red Garter, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Red Garter Steakhouse</div>
         <a class="maps-btn" href="https://www.google.com/maps/search/Red+Garter+Steakhouse+Florence+Italy" target="_blank" rel="noopener noreferrer">
@@ -385,9 +444,10 @@
         </a>
       </div>
       <p>Established in 1962, the Red Garter is one of Florence's longest-running international bars and restaurants. It opened during a time when American culture was becoming increasingly popular in post-war Italy and even survived the devastating 1966 Florence Flood, when much of the historic centre was submerged by the Arno River.</p>
-      <p>Today it's known for steaks, burgers, live music and karaoke. If, after a week or two of Italian food, you're craving a little comfort food or a taste of home, this is a fun place to spend an evening.</p>
-      <div class="dont-miss">A steak, burger and a lively night downstairs.</div>
+      <p>Today it's known for steaks, burgers, live music and karaoke. If, after a week or two of Italian food, you're craving a little comfort food or a taste of home, this is a great place for a sit down lunch & beer.</p>
+      <div class="dont-miss">The Florentine steak (best shared between 2–4 people) or what many consider the best burger in Florence.</div>
     </div>
+
   </section>
 
   <!-- SHOPPING -->
@@ -395,7 +455,9 @@
     <div class="section-label">🛍 Shopping</div>
 
     <div class="place-card">
-      <div class="place-card-header">
+
+        <div class="place-card-img"><img src="../images/florence-leather-thumbnail.jpg" alt="Peruzzi Leather, Florence" /></div>
+        <div class="place-card-header">
         <div class="place-name">Peruzzi Leather</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/sTwvSXLDZ7W9pcgP7" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -403,10 +465,12 @@
         </a>
       </div>
       <p>Leatherworking has been part of Florence's identity since the Middle Ages, when powerful artisan guilds helped make the city one of Europe's wealthiest trading centres. Florence remains famous for quality leather craftsmanship, and Peruzzi continues that tradition with beautifully made bags, wallets and jackets.</p>
-      <div class="dont-miss">A leather wallet or handbag that will last for years.</div>
+      <div class="dont-miss">A leather wallet or handbag that will last for decades.</div>
+    </div>
     </div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/the-gold-corner.jpg" alt="Gold Corner jewellery, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Gold Corner</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/agiYzp6QwThQvAERA" target="_blank" rel="noopener noreferrer">
@@ -414,11 +478,12 @@
           Maps
         </a>
       </div>
-      <p>Florence has been renowned for goldsmiths for centuries, particularly around the nearby Ponte Vecchio, where jewellers replaced the old butcher shops in 1593 on the orders of Grand Duke Ferdinando I de' Medici. That tradition continues today, making Florence one of Italy's finest cities for jewellery.</p>
+      <p>Florence is one of the world's great jewellery cities, with a tradition stretching back hundreds of years. While the Ponte Vecchio is famous for its jewellers, I've found The Gold Corner to be a much more relaxed place to shop. There's a great selection, no need to fight the crowds, and the staff are happy to explain the pieces without any pressure. It's where I recommend guests begin their search for a lasting Florentine keepsake.</p>
       <div class="dont-miss">Elegant 18-carat Italian gold jewellery.</div>
     </div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/puzzle-ring6-thumbnail.jpg" alt="Leonardo's puzzle rings, Florence" /></div>
       <div class="place-card-header">
         <div class="place-name">Leonardo's Puzzle Rings</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/Yj7tMxNquTXVYoCN9" target="_blank" rel="noopener noreferrer">
@@ -426,7 +491,7 @@
           Maps
         </a>
       </div>
-      <p>One of Florence's most unusual jewellery shops, Leonardo's specialises in the famous puzzle ring — multiple interlocking bands that come apart completely before being reassembled. The design is centuries old and has become a memorable keepsake for visitors looking for something a little different.</p>
+      <p>One of Florence's great leather & jewellery shops, Leonardo's specialises in a lot, including the famous puzzle ring — multiple interlocking bands that come apart completely before being reassembled. The design is centuries old and has become a memorable keepsake for visitors looking for something you cant find elsewhere and with a story that stands out!</p>
       <div class="dont-miss">Watch the staff demonstrate how the rings come apart and fit back together.</div>
       <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
         <a href="https://www.leonardoleatherandgold.com" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">Website</a>
@@ -440,8 +505,9 @@
     <div class="section-label">🍷 Wine Windows</div>
 
     <div class="place-card">
+      <div class="place-card-img"><img src="../images/wine-window-thumbnail.webp" alt="Buchetta del Vino wine window, Florence" /></div>
       <div class="place-card-header">
-        <div class="place-name">Buchette del Vino</div>
+        <div class="place-name">Buchette del Vino - "Wine Windows"</div>
         <a class="maps-btn" href="https://maps.app.goo.gl/qUdbPyA6C9GT9TZ86" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           Maps
@@ -451,7 +517,8 @@
       <p>More than 150 wine windows still survive across Florence, and many have recently reopened. Ordering a glass through one is one of the city's most unique experiences. There's one near our meeting point at Piazza dei Peruzzi, and another at Vivoli Gelato.</p>
       <div class="dont-miss">A glass of Chianti or an Aperol Spritz served through a window that's been here for hundreds of years.</div>
       <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
-        More about wine windows: <a href="https://bdv.one/english" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">bdv.one/english</a>
+        More about wine windows: <a href="https://bdv.one/english" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">bdv.one/english</a>
+        <a href="https://www.instagram.com/winewindowborgodeigreci/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
       </p>
     </div>
   </section>
