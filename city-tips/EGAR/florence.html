@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Florence · Free Time Guide | Tour with Joel</title>
+  <meta name="description" content="Joel's personal recommendations for free time in Florence — gelato, sandwiches, shopping, wine windows and more." />
+  <link rel="icon" href="../../images/favicon-tourwithjoel.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:      #4f7171;
+      --brand-dark: #2f4659;
+      --text:       #1a2530;
+      --muted:      #5c6b78;
+      --bg:         #f5f6f4;
+      --card-bg:    #ffffff;
+      --border:     rgba(180,200,195,.55);
+      --accent-bg:  rgba(79,113,113,.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: var(--brand-dark);
+      color: #fff;
+      padding: 18px 20px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .page-header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .page-header-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .page-header-sub {
+      font-size: .78rem;
+      opacity: .72;
+      margin-top: 2px;
+    }
+    .back-link {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-size: .82rem;
+      white-space: nowrap;
+    }
+    .back-link:hover { color: #fff; }
+
+    /* ── NAV PILLS ── */
+    .nav-strip {
+      background: var(--brand-dark);
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: 0 20px 12px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .nav-strip-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      gap: 8px;
+    }
+    .nav-pill {
+      white-space: nowrap;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      color: rgba(255,255,255,.85);
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .nav-pill:hover { background: rgba(255,255,255,.22); color: #fff; }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 16px 60px;
+    }
+
+    /* ── MAP ── */
+    .map-block {
+      margin-bottom: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 18px rgba(10,20,30,.08);
+    }
+    .map-block iframe {
+      display: block;
+      width: 100%;
+      height: 360px;
+      border: none;
+    }
+    .map-placeholder {
+      height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--accent-bg);
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+      padding: 20px;
+    }
+    .map-placeholder-icon { font-size: 2rem; }
+
+    /* ── SECTION ── */
+    .city-section {
+      margin-bottom: 44px;
+    }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--accent-bg);
+      border: 1px solid rgba(79,113,113,.15);
+      color: var(--brand);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* ── PLACE CARDS ── */
+    .place-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: 0 2px 10px rgba(10,20,30,.05);
+    }
+    .place-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .place-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .maps-btn {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .maps-btn:hover { background: var(--brand-dark); }
+    .maps-btn svg { width: 12px; height: 12px; fill: currentColor; }
+
+    .place-card p {
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .place-card p:last-child { margin-bottom: 0; }
+
+    .dont-miss {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent-bg);
+      border-left: 3px solid var(--brand);
+      font-size: .86rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .dont-miss::before {
+      content: "★";
+      color: var(--brand);
+      font-size: .8rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* area highlight — no card border, slightly different style */
+    .area-card {
+      background: var(--accent-bg);
+      border: 1px solid rgba(79,113,113,.18);
+      border-radius: 18px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+    .area-card .place-name { color: var(--brand-dark); }
+    .area-card p { color: var(--text); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px 20px 40px;
+      color: var(--muted);
+      font-size: .82rem;
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 520px) {
+      .place-card-header { flex-direction: column; gap: 8px; }
+      .maps-btn { align-self: flex-start; }
+      .map-block iframe { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <div class="page-header-title">🇮🇹 Florence</div>
+      <div class="page-header-sub">Joel's Free Time Guide</div>
+    </div>
+    <a class="back-link" href="../../welcome/grand-european.html">← Back to tour page</a>
+  </div>
+</header>
+
+<div class="nav-strip">
+  <div class="nav-strip-inner">
+    <a class="nav-pill" href="#gelato">🍦 Gelato</a>
+    <a class="nav-pill" href="#sandwiches">🥪 Lunch</a>
+    <a class="nav-pill" href="#via-dei-neri">🍷 Via dei Neri</a>
+    <a class="nav-pill" href="#dinner">🥩 Dinner</a>
+    <a class="nav-pill" href="#shopping">🛍 Shopping</a>
+    <a class="nav-pill" href="#wine-windows">🍷 Wine Windows</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- MAP -->
+  <div class="map-block">
+    <!-- Replace this placeholder with your Google My Maps iframe -->
+    <div class="map-placeholder">
+      <div class="map-placeholder-icon">📍</div>
+      <div>Interactive map with all pins coming soon.<br>Each place below links directly to Google Maps.</div>
+    </div>
+  </div>
+
+  <!-- GELATO -->
+  <section class="city-section" id="gelato">
+    <div class="section-label">🍦 Gelato</div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">La Carraia</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/L2B5sd4rNEmvBMKP6" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>One of my favourite places for gelato. Florence played an important role in the history of gelato during the Renaissance, with the Medici court helping popularise frozen desserts across Europe. Today, La Carraia is known for generous portions, excellent value and consistently great flavours.</p>
+      <div class="dont-miss">Fondente (Dark Chocolate) — one of the richest and most intensely chocolatey gelatos in Florence.</div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Gelateria dei Neri</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/hxVccfRSmk1FWEcg6" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>A long-time favourite with both Florentines and visitors, offering everything from traditional pistachio and hazelnut to more creative seasonal flavours. It's the sort of place locals still happily recommend, making it an ideal stop while wandering Florence's medieval streets.</p>
+      <div class="dont-miss">Pistachio or one of the seasonal specials.</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        <a href="https://gelateriadeineri.it" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">Website</a>
+        <a href="https://www.instagram.com/gelateriadeinerifirenze/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
+      </p>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Vivoli</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/Jx6m81b2afmmGLEYA" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>Founded in 1929 by Serafino Vivoli, who left his family's farm in Pelago to try his luck in Florence, Vivoli began as a simple dairy on Via Isola delle Stinche in the Santa Croce district — selling coffee and whipped cream to the craftsmen and locals of the neighbourhood. Nearly a century later it remains one of Florence's most beloved gelaterias.</p>
+      <p>It's best known for <em>La gran crema al caffè</em> — their take on the affogato, encapsulating the perfect contrast between sweet and bitter, hot and cold. A perfect stop when you need both a coffee and something sweet.</p>
+      <div class="dont-miss">La gran crema al caffè — ask for it by name.</div>
+    </div>
+  </section>
+
+  <!-- SANDWICHES -->
+  <section class="city-section" id="sandwiches">
+    <div class="section-label">🥪 Sandwiches &amp; Lunch</div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Pino's Sandwiches (Salumeria Verdi)</div>
+        <a class="maps-btn" href="https://www.google.com/maps/search/Salumeria+Verdi+Pino+Florence+Italy" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>One of Florence's favourite local sandwich shops, Pino's has built a loyal following thanks to generous fillings, fresh ingredients and the owner's unforgettable personality. While other sandwich shops attract the crowds, this is where many guides, students and locals still head for lunch.</p>
+      <div class="dont-miss">Ask Pino for his recommendation — he rarely disappoints.</div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">All'Antico Vinaio</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/x6erug4zoqbHmP366" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>Probably Florence's most famous sandwich shop — and the birthplace of a global phenomenon. Italy has never really embraced fast-food chains in the same way as Australia, New Zealand or the United States. Instead, Italians have traditionally grabbed a fresh sandwich from a local bakery or delicatessen. All'Antico Vinaio took that tradition and transformed it into an international success story.</p>
+      <p>Founded here on Via dei Neri in 1989, it has grown from a single neighbourhood shop into a worldwide brand with locations across Europe, North America and the Middle East. Yet this remains the original store that introduced Florentine schiacciata to millions of people.</p>
+      <div class="dont-miss">A classic schiacciata filled with Tuscan cured meats, pecorino and truffle cream.</div>
+    </div>
+  </section>
+
+  <!-- VIA DEI NERI -->
+  <section class="city-section" id="via-dei-neri">
+    <div class="section-label">🍷 Via dei Neri</div>
+
+    <div class="area-card">
+      <div class="place-card-header">
+        <div class="place-name">Via dei Neri — Florence's Food Street</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/x6erug4zoqbHmP366" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          View Street
+        </a>
+      </div>
+      <p>If Florence had a street dedicated to food, this would be it. This narrow medieval lane has evolved into one of the city's best places to eat, lined with sandwich shops, wine bars, gelaterias and traditional trattorias. It's lively throughout the day and evening — wander, browse the menus and follow whatever smells the best.</p>
+      <div class="dont-miss">Return in the evening for an aperitivo before dinner.</div>
+    </div>
+  </section>
+
+  <!-- DINNER -->
+  <section class="city-section" id="dinner">
+    <div class="section-label">🥩 Dinner</div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Red Garter Steakhouse</div>
+        <a class="maps-btn" href="https://www.google.com/maps/search/Red+Garter+Steakhouse+Florence+Italy" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>Established in 1962, the Red Garter is one of Florence's longest-running international bars and restaurants. It opened during a time when American culture was becoming increasingly popular in post-war Italy and even survived the devastating 1966 Florence Flood, when much of the historic centre was submerged by the Arno River.</p>
+      <p>Today it's known for steaks, burgers, live music and karaoke. If, after a week or two of Italian food, you're craving a little comfort food or a taste of home, this is a fun place to spend an evening.</p>
+      <div class="dont-miss">A steak, burger and a lively night downstairs.</div>
+    </div>
+  </section>
+
+  <!-- SHOPPING -->
+  <section class="city-section" id="shopping">
+    <div class="section-label">🛍 Shopping</div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Peruzzi Leather</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/sTwvSXLDZ7W9pcgP7" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>Leatherworking has been part of Florence's identity since the Middle Ages, when powerful artisan guilds helped make the city one of Europe's wealthiest trading centres. Florence remains famous for quality leather craftsmanship, and Peruzzi continues that tradition with beautifully made bags, wallets and jackets.</p>
+      <div class="dont-miss">A leather wallet or handbag that will last for years.</div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Gold Corner</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/agiYzp6QwThQvAERA" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>Florence has been renowned for goldsmiths for centuries, particularly around the nearby Ponte Vecchio, where jewellers replaced the old butcher shops in 1593 on the orders of Grand Duke Ferdinando I de' Medici. That tradition continues today, making Florence one of Italy's finest cities for jewellery.</p>
+      <div class="dont-miss">Elegant 18-carat Italian gold jewellery.</div>
+    </div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Leonardo's Puzzle Rings</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/Yj7tMxNquTXVYoCN9" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>One of Florence's most unusual jewellery shops, Leonardo's specialises in the famous puzzle ring — multiple interlocking bands that come apart completely before being reassembled. The design is centuries old and has become a memorable keepsake for visitors looking for something a little different.</p>
+      <div class="dont-miss">Watch the staff demonstrate how the rings come apart and fit back together.</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        <a href="https://www.leonardoleatherandgold.com" target="_blank" rel="noopener noreferrer" style="color:var(--brand); margin-right:14px;">Website</a>
+        <a href="https://www.instagram.com/leonardo_leather_gold/" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">Instagram</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- WINE WINDOWS -->
+  <section class="city-section" id="wine-windows">
+    <div class="section-label">🍷 Wine Windows</div>
+
+    <div class="place-card">
+      <div class="place-card-header">
+        <div class="place-name">Buchette del Vino</div>
+        <a class="maps-btn" href="https://maps.app.goo.gl/qUdbPyA6C9GT9TZ86" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Maps
+        </a>
+      </div>
+      <p>One of Florence's most charming traditions. During the 16th and 17th centuries, wealthy Florentine families built tiny openings into the walls of their palaces so they could sell wine directly from their own estates. These wine windows allowed merchants to avoid middlemen and became especially useful during outbreaks of plague, when goods could be exchanged with minimal contact.</p>
+      <p>More than 150 wine windows still survive across Florence, and many have recently reopened. Ordering a glass through one is one of the city's most unique experiences. There's one near our meeting point at Piazza dei Peruzzi, and another at Vivoli Gelato.</p>
+      <div class="dont-miss">A glass of Chianti or an Aperol Spritz served through a window that's been here for hundreds of years.</div>
+      <p style="margin-top:12px; font-size:.84rem; color:var(--muted);">
+        More about wine windows: <a href="https://bdv.one/english" target="_blank" rel="noopener noreferrer" style="color:var(--brand);">bdv.one/english</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  A personal guide from your Travel Director, Joel Plunkett. For official tour timings and inclusions, refer to your Trafalgar documents.
+</footer>
+
+</body>
+</html>
