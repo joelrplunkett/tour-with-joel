@@ -541,6 +541,25 @@ img { max-width: 100%; display: block; }
     url("images/belfast.webp") center / cover no-repeat;
 }
 
+.europe-divider {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.68)),
+    url("images/europe-divider.webp") center / cover no-repeat;
+}
+
+.paris-cafe-divider {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.62)),
+    url("images/paris-cafe.webp") center 40% / cover no-repeat;
+}
+
+.moulin-rouge-divider {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.05)),
+    url("images/moulin-rouge-night.webp") center / cover no-repeat;
+  align-items: flex-start;
+}
+
 .tour-divider-overlay {
   position: absolute;
   inset: 0;
