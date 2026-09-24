@@ -321,6 +321,23 @@ a:hover{opacity:.88}
     linear-gradient(120deg, #2c3e2e 0 28%, #3a5040 28% 50%, #324456 50% 72%, #232d30 72% 100%);
 }
 
+.page-irex .hero{
+  background:
+    linear-gradient(90deg, rgba(10,22,16,.74) 0%, rgba(10,22,16,.48) 38%, rgba(10,22,16,.18) 62%, rgba(10,22,16,.52) 100%),
+    linear-gradient(180deg, rgba(12,26,18,.16) 0%, rgba(12,26,18,.48) 58%, rgba(12,26,18,.82) 100%),
+    radial-gradient(circle at 68% 22%, rgba(180,220,190,.16), transparent 32%),
+    linear-gradient(120deg, rgba(30,58,38,.40), rgba(36,62,48,.28) 52%, rgba(24,38,32,.24) 88%),
+    url("../images/joel-pick-kerry-1.webp") 50% 44%/cover no-repeat;
+}
+
+.page-irex .hero::before{
+  background:
+    radial-gradient(circle at 18% 22%, rgba(190,230,200,.18), transparent 14%),
+    radial-gradient(circle at 76% 18%, rgba(210,240,220,.12), transparent 12%),
+    linear-gradient(180deg, rgba(20,42,26,.06), rgba(20,42,26,.44)),
+    linear-gradient(120deg, #1e3a26 0 28%, #2e4e38 28% 50%, #264438 50% 72%, #1a2c22 72% 100%);
+}
+
 .page-ge .hero{
   background:
     linear-gradient(90deg, rgba(12,18,24,.70) 0%, rgba(12,18,24,.44) 36%, rgba(12,18,24,.18) 62%, rgba(12,18,24,.52) 100%),
@@ -637,6 +654,10 @@ h1{
 .tour-divider-card .tour-divider-img-glendalough{
   object-position:center 50%;
   filter:brightness(.98) contrast(1.04) saturate(1.05);
+}
+.tour-divider-card .tour-divider-img-kylemore{
+  object-position:center 48%;
+  filter:brightness(.98) contrast(1.04) saturate(1.06);
 }
 
 .tour-divider-card figcaption{
