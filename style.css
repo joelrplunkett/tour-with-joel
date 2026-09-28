@@ -1019,7 +1019,7 @@ h1 {
 
 #upcoming-tours .info-grid {
   align-items: stretch;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 #upcoming-tours .info-card {
